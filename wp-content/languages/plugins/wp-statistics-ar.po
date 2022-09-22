@@ -1,0 +1,1636 @@
+# Translation of Plugins - WP Statistics - Stable (latest release) in Arabic
+# This file is distributed under the same license as the Plugins - WP Statistics - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-09-04 20:32:24+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n % 100 >= 3 && n % 100 <= 10) ? 3 : ((n % 100 >= 11 && n % 100 <= 99) ? 4 : 5))));\n"
+"X-Generator: GlotPress/4.0.0-alpha.1\n"
+"Language: ar\n"
+"Project-Id-Version: Plugins - WP Statistics - Stable (latest release)\n"
+
+#: includes/admin/templates/settings/notifications.php:158
+#: includes/class-wp-statistics-admin-bar.php:93
+#: includes/class-wp-statistics-widget.php:48
+#: includes/class-wp-statistics-widget.php:268
+msgid "Today's Visits"
+msgstr "زيارات اليوم"
+
+#: includes/admin/templates/settings/notifications.php:156
+#: includes/class-wp-statistics-admin-bar.php:89
+#: includes/class-wp-statistics-widget.php:55
+#: includes/class-wp-statistics-widget.php:272
+msgid "Today's Visitors"
+msgstr "زوار اليوم"
+
+#: includes/class-wp-statistics-menus.php:228
+msgid "Categories"
+msgstr "تصنيفات"
+
+#: includes/class-wp-statistics-widget.php:90
+#: includes/class-wp-statistics-widget.php:292
+msgid "Last 365 Days Visits"
+msgstr "زيارات آخر 365 يوم"
+
+#: includes/class-wp-statistics-widget.php:83
+#: includes/class-wp-statistics-widget.php:288
+msgid "Last 30 Days Visits"
+msgstr "زيارات آخر 30 يوم"
+
+#: includes/class-wp-statistics-widget.php:76
+#: includes/class-wp-statistics-widget.php:284
+msgid "Last 7 Days Visits"
+msgstr "زيارات آخر 7 ايام"
+
+#: includes/class-wp-statistics-user-agent.php:32
+#: includes/class-wp-statistics-user-agent.php:146
+msgctxt "Browser"
+msgid "Unknown"
+msgstr "غير معروف"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:230
+msgid "More Details"
+msgstr "المزيد من التفاصيل"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:231
+msgid "Reload"
+msgstr "إعادة تحميل"
+
+#: includes/admin/templates/pages/author.php:39
+msgid "Number of posts by author:"
+msgstr "عدد المشاركات من قبل الكاتب"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:271
+#: includes/admin/templates/pages/author.php:32
+#: includes/admin/templates/pages/author.php:79
+#: includes/admin/templates/pages/category.php:32
+#: includes/admin/templates/pages/category.php:79
+#: includes/admin/templates/pages/tag.php:32
+#: includes/admin/templates/pages/tag.php:79
+msgid "Count"
+msgstr "العد"
+
+#: includes/admin/templates/pages/author.php:23
+#: includes/admin/templates/pages/author.php:26
+msgid "Author Statistics Summary"
+msgstr "ملخص إحصائيات الكاتب"
+
+#: includes/admin/templates/pages/author.php:6
+#: includes/admin/templates/pages/author.php:9
+msgid "Author Statistics Chart"
+msgstr "الرسم البياني لإحصائيات الكاتب"
+
+#: includes/admin/pages/class-wp-statistics-admin-page-authors.php:51
+msgid "Select Author"
+msgstr "اختر الكاتب"
+
+#: includes/admin/pages/class-wp-statistics-admin-page-authors.php:39
+msgid "Author Statistics"
+msgstr "احصائيات الكاتب"
+
+#: includes/admin/templates/pages/author.php:6
+#: includes/admin/templates/pages/author.php:23
+#: includes/admin/templates/pages/author.php:70
+#: includes/admin/templates/pages/category.php:6
+#: includes/admin/templates/pages/category.php:23
+#: includes/admin/templates/pages/category.php:70
+#: includes/admin/templates/pages/pages.php:6
+#: includes/admin/templates/pages/pages.php:24
+#: includes/admin/templates/pages/refer.url.php:19
+#: includes/admin/templates/pages/tag.php:6
+#: includes/admin/templates/pages/tag.php:23
+#: includes/admin/templates/pages/tag.php:70
+msgid "Toggle panel: %s"
+msgstr "لوحة التبديل: %s"
+
+#: includes/defines/country-codes.php:6
+msgctxt "Country"
+msgid "Unknown"
+msgstr "غير معروف"
+
+#: includes/class-wp-statistics-search-engine.php:151
+msgctxt "Search Engine"
+msgid "Unknown"
+msgstr "غير معروف"
+
+#: includes/class-wp-statistics-user-agent.php:34
+#: includes/class-wp-statistics-user-agent.php:151
+msgctxt "Version"
+msgid "Unknown"
+msgstr "غير معروف"
+
+#: includes/admin/meta-box/wp-statistics-meta-box-platforms.php:73
+#: includes/class-wp-statistics-user-agent.php:33
+#: includes/class-wp-statistics-user-agent.php:116
+msgctxt "Platform"
+msgid "Unknown"
+msgstr "غير معروف"
+
+#: includes/admin/pages/class-wp-statistics-admin-page-refer.php:81
+msgid "Referring site: %s"
+msgstr "موقع الإحالة: %s"
+
+#: includes/admin/templates/layout/date.range.php:15
+msgid "Select"
+msgstr "تحديد"
+
+#: includes/admin/class-wp-statistics-admin-network.php:29
+#: includes/admin/class-wp-statistics-admin-network.php:59
+#: includes/class-wp-statistics-menus.php:166
+msgid "Overview"
+msgstr "نظرة عامة"
+
+#: includes/admin/class-wp-statistics-admin-network.php:61
+#: includes/class-wp-statistics-menus.php:179
+msgid "Online"
+msgstr "المتواجدون"
+
+#: includes/admin/class-wp-statistics-admin-network.php:62
+#: includes/class-wp-statistics-menus.php:193
+msgid "Referrers"
+msgstr "الدعوات"
+
+#: includes/admin/class-wp-statistics-admin-network.php:63
+#: includes/class-wp-statistics-menus.php:200
+msgid "Search Words"
+msgstr "كلمات البحث"
+
+#: includes/admin/class-wp-statistics-admin-network.php:69
+#: includes/admin/pages/class-wp-statistics-admin-page-top-visitors-today.php:32
+#: includes/class-wp-statistics-menus.php:263
+msgid "Top Visitors Today"
+msgstr "أعلى زوار اليوم"
+
+#: includes/admin/class-wp-statistics-admin-network.php:71
+#: includes/class-wp-statistics-menus.php:277
+msgid "Optimization"
+msgstr "التحسين"
+
+#: includes/admin/class-wp-statistics-admin-network.php:50
+msgid "Site"
+msgstr "موقع"
+
+#: includes/admin/class-wp-statistics-admin-network.php:51
+msgid "Options"
+msgstr "خيارات"
+
+#: includes/admin/pages/class-wp-statistics-admin-page-optimization.php:36
+#: includes/admin/pages/class-wp-statistics-admin-page-settings.php:16
+msgid "You do not have sufficient permissions to access this page."
+msgstr "ليس لديك الصلاحيات الكافية لدخول هذه الصفحة."
+
+#: includes/class-wp-statistics-geoip.php:314
+msgid "Error downloading GeoIP database from: %s - %s"
+msgstr "خطأ تحميل قاعدة بيانات GeoIP من: %s - %s"
+
+#: includes/class-wp-statistics-geoip.php:329
+msgid "Error could not open downloaded GeoIP database for reading: %s"
+msgstr "خطأ لا يمكن فتح قاعدة البيانات GeoIP التي تم تحميلها للقراءة: %s"
+
+#: includes/class-wp-statistics-geoip.php:338
+msgid "Error could not open destination GeoIP database for writing %s"
+msgstr "خطأ لا يمكن فتح قاعدة البيانات GeoIP لجهة الكتابة %s"
+
+#: includes/class-wp-statistics-geoip.php:353
+msgid "GeoIP Database updated successfully!"
+msgstr "تم تحديث قاعدة بيانات GeoIP بنجاح!"
+
+#: includes/class-wp-statistics-geoip.php:373
+msgid "GeoIP update on"
+msgstr "تحديث GeoIP على"
+
+#. Plugin URI of the plugin
+msgid "https://wp-statistics.com/"
+msgstr "https://wp-statistics.com/"
+
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:66
+#: includes/class-wp-statistics-shortcode.php:221
+msgid "The post/page ID to get page statistics on."
+msgstr "رقم المقال/الصفحة للحصول على احصائياتها."
+
+#: includes/class-wp-statistics-shortcode.php:218
+msgid "Post/Page ID"
+msgstr "رقم المقال/الصفحة"
+
+#: includes/class-wp-statistics-shortcode.php:189
+msgid "The time frame to get the statistic for, strtotime() (http://php.net/manual/en/datetime.formats.php) will be used to calculate it. Use \"total\" to get all recorded dates."
+msgstr "الجدول الزمني للحصول على إحصائية لـ, strtotime() (http://php.net/manual/en/datetime.formats.php) سيتم استخدامها لحساب ذلك. استخدام \"المجموع\" للحصول على كل التواريخ المسجلة."
+
+#: includes/admin/class-wp-statistics-admin-notices.php:123
+msgid "visitor tracking"
+msgstr "تتبع الزوار"
+
+#: includes/admin/class-wp-statistics-admin-notices.php:127
+msgid ","
+msgstr "،"
+
+#: includes/admin/class-wp-statistics-admin-notices.php:118
+msgid "hit tracking"
+msgstr "تتبع النقرات"
+
+#: includes/admin/class-wp-statistics-admin-notices.php:113
+msgid "online user tracking"
+msgstr "تتبع المستخدم المتصل"
+
+#: includes/admin/templates/layout/tabs-settings.php:10
+msgid "Externals"
+msgstr "الجهات الخارجية"
+
+#: includes/admin/templates/settings/externals.php:174
+msgid "Update Matomo Referrer Spam Blacklist Info:"
+msgstr "تحديث Piwik لإحالات الرسائل الغير مرغوب فيها بمعلومات القائمة السوداء"
+
+#: includes/admin/templates/settings/externals.php:154
+msgid "Referrer spam blacklist is provided by Matomo, available from %s."
+msgstr "يتم توفير إحالات الرسائل الغير مرغوب فيها بالقائمة السوداء من قبل Piwik، وهي متاحة من %s."
+
+#: includes/admin/templates/settings/exclusions.php:131
+msgid "Treat any visitor with corrupt browser info (missing IP address or empty user agent string) as a robot."
+msgstr "علاج أي زائر مع معلومات الفاسدة المتصفح (عنوان IP مفقود أو فارغة سلسلة عامل المستخدم) على الروبوت."
+
+#: includes/admin/templates/settings/exclusions.php:205
+msgid "Exclude any URL that returns a \"404 - Not Found\" message."
+msgstr "استبعاد أي URL التي تقوم بإرجاع - رسالة &quot;404 لم يتم العثور على&quot;."
+
+#: includes/admin/templates/settings/general.php:314
+msgid "If a search engine is identified as the referrer but it does not include the search query this option will substitute the page title in quotes preceded by \"~:\" as the search query to help identify what the user may have been searching for."
+msgstr "إذا تم التعرف على محرك بحث باسم المرجع لكنه لا يشمل استعلام البحث هذا الخيار يوجب استبدال عنوان الصفحة في الاقتباس الذي يسبقه \"~:\" كما طلب البحث للمساعدة في تحديد ما قد تم البحث عنه من قبل المستخدم."
+
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:39
+#: includes/class-wp-statistics-shortcode.php:171
+msgid "Page Visits"
+msgstr "عدد زيارات هذه الصفحة"
+
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:42
+#: includes/class-wp-statistics-shortcode.php:174
+msgid "Page Count"
+msgstr "عدد الصفحة"
+
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:43
+#: includes/class-wp-statistics-shortcode.php:175
+msgid "Comment Count"
+msgstr "عدد التعليق"
+
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:44
+#: includes/class-wp-statistics-shortcode.php:176
+msgid "Spam Count"
+msgstr "عدد السبام"
+
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:46
+#: includes/class-wp-statistics-shortcode.php:178
+#: includes/class-wp-statistics-widget.php:160
+#: includes/class-wp-statistics-widget.php:351
+msgid "Post Average"
+msgstr "متوسط المشاركة"
+
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:47
+#: includes/class-wp-statistics-shortcode.php:179
+#: includes/class-wp-statistics-widget.php:167
+#: includes/class-wp-statistics-widget.php:355
+msgid "Comment Average"
+msgstr "متوسط التعليق"
+
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:48
+#: includes/class-wp-statistics-shortcode.php:180
+#: includes/class-wp-statistics-widget.php:174
+#: includes/class-wp-statistics-widget.php:359
+msgid "User Average"
+msgstr "متوسط المستخدم"
+
+#: includes/class-wp-statistics-shortcode.php:196
+msgid "Search Provider"
+msgstr "محرك البحث"
+
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:62
+#: includes/class-wp-statistics-shortcode.php:199
+msgid "The search provider to get statistics on."
+msgstr "مزود البحث للحصول على إحصائيات عن."
+
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:64
+#: includes/class-wp-statistics-shortcode.php:206
+msgid "The format to display numbers in: i18n, english, none."
+msgstr "صيغة الأرقام للعرض في: I18N، الانجليزية، لا شيء."
+
+#: includes/class-wp-statistics-shortcode.php:213
+msgid "English"
+msgstr "الإنجليزية"
+
+#: includes/class-wp-statistics-shortcode.php:214
+msgid "International"
+msgstr "دولي"
+
+#: includes/class-wp-statistics-shortcode.php:165
+msgid "Select the statistic you wish to display."
+msgstr "حدد الإحصائية التي ترغب في عرضها."
+
+#: includes/class-wp-statistics-shortcode.php:162
+msgid "Statistic"
+msgstr "إحصائية"
+
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:41
+#: includes/class-wp-statistics-shortcode.php:173
+msgid "Post Count"
+msgstr "عدد المقال"
+
+#: includes/admin/templates/layout/date.range.php:30
+#: includes/class-wp-statistics-shortcode.php:186
+msgid "Time Frame"
+msgstr "الإطار الزمني"
+
+#: includes/admin/templates/settings/general.php:150
+msgid "Enable or disable this feature"
+msgstr "تمكين أو تعطيل هذه الميزة"
+
+#: includes/admin/class-wp-statistics-admin-network.php:65
+#: includes/class-wp-statistics-menus.php:214
+msgid "Pages"
+msgstr "الصفحات"
+
+#: includes/admin/templates/settings/general.php:268
+msgid "Miscellaneous"
+msgstr "متفرقات"
+
+#: includes/admin/templates/optimization/resources.php:86
+#: includes/admin/templates/optimization/resources.php:102
+#: includes/admin/templates/settings/general.php:279
+msgid "No"
+msgstr "لا"
+
+#: includes/admin/templates/optimization/resources.php:84
+#: includes/admin/templates/optimization/resources.php:100
+#: includes/admin/templates/settings/general.php:278
+msgid "Yes"
+msgstr "نعم"
+
+#: includes/admin/templates/settings/general.php:303
+#: includes/class-wp-statistics-menus.php:207
+msgid "Search Engines"
+msgstr "محركات البحث"
+
+#: includes/admin/templates/settings/general.php:180
+#: includes/admin/templates/settings/general.php:191
+#: includes/admin/templates/settings/general.php:337
+#: includes/admin/templates/settings/overview-display.php:25
+#: includes/admin/templates/settings/overview-display.php:42
+msgid "Disable"
+msgstr "تعطيل"
+
+#: includes/admin/templates/settings/general.php:338
+msgid "Disable %s from data collection and reporting."
+msgstr "تعطيل %s من جمع البيانات وإعداد التقارير."
+
+#: includes/admin/templates/settings/general.php:349
+msgid "Charts"
+msgstr "الرسوم البيانية"
+
+#: includes/admin/templates/settings/general.php:359
+msgid "Add a total line to charts with multiple values, like the search engine referrals"
+msgstr "إضافة سطر مجموع المخططات مع قيم متعددة، مثل إحالات محرك البحث"
+
+#: includes/admin/templates/settings/externals.php:83
+msgid "Download of the GeoIP database will be scheduled for 2 days after the first Tuesday of the month."
+msgstr "سيتم جدولة التحميل من قاعدة البيانات GeoIP لمدة 2 يوما بعد يوم الثلاثاء الأول من الشهر."
+
+#: includes/admin/templates/settings/externals.php:84
+msgid "This option will also download the database if the local filesize is less than 1k (which usually means the stub that comes with the plugin is still in place)."
+msgstr "وهذا الخيار أيضا تحميل قاعدة البيانات إذا كان حجم الملف المحلي أقل من 1K (الذي يعني عادة أن طرف البرنامج التي تأتي مع البرنامج المساعد لا يزال في مكانه)."
+
+#: includes/admin/templates/settings/externals.php:116
+msgid "GeoIP collection is disabled due to the following reasons:"
+msgstr "تم تعطيل مجموعة GeoIP وذلك للأسباب التالية:"
+
+#: includes/admin/templates/settings/externals.php:120
+msgid "GeoIP collection requires the cURL PHP extension and it is not loaded on your version of PHP!"
+msgstr "مجموعة GeoIP تتطلب الملحق cURL PHP و هو غير مفعل على إصدار الـ PHP!"
+
+#: includes/admin/templates/settings/externals.php:126
+msgid "GeoIP collection requires the BC Math PHP extension and it is not loaded on your version of PHP!"
+msgstr "مجموعة GeoIP تتطلب الملحق BC Math PHP و هو غير مفعل على إصدار الـ PHP!"
+
+#: includes/admin/templates/settings/externals.php:132
+msgid "PHP safe mode detected! GeoIP collection is not supported with PHP's safe mode enabled!"
+msgstr "تم الكشف عن الوضع الآمن في PHP! مجموعة GeoIP غير معتمدة عند تمكين الوضع الآمن في PHP!"
+
+#: includes/admin/templates/settings/maintenance.php:5
+msgid "This will permanently delete data from the database each day, are you sure you want to enable this option?"
+msgstr "سيؤدي ذلك إلى حذف البيانات من قاعدة البيانات بشكل دائم كل يوم، هل أنت متأكد من أنك تريد تمكين هذا الخيار؟"
+
+#: includes/admin/templates/optimization/purging.php:234
+#: includes/admin/templates/settings/maintenance.php:36
+msgid "Days"
+msgstr "أيام"
+
+#: includes/admin/templates/settings/notifications.php:10
+msgid "Common Report Options"
+msgstr "خيارات تقرير المشترك"
+
+#: includes/admin/templates/settings/notifications.php:33
+msgid "Update Reports"
+msgstr "تقارير التحديث"
+
+#: includes/admin/templates/settings/notifications.php:50
+msgid "Pruning:"
+msgstr "تنقيح"
+
+#: includes/admin/templates/settings/notifications.php:66
+#: includes/class-wp-statistics-schedule.php:229
+msgid "Statistical reporting"
+msgstr "تقارير الإحصائيات"
+
+#: includes/admin/templates/settings/notifications.php:116
+msgid "Select how often to receive statistical report."
+msgstr "حدد عدد المرات لتلقي تقرير إحصائي."
+
+#: includes/admin/templates/pages/online.php:45
+#: includes/admin/templates/settings/notifications.php:129
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: includes/admin/templates/settings/notifications.php:131
+msgid "SMS"
+msgstr "رسائل نصية"
+
+#: includes/admin/templates/settings/notifications.php:135
+msgid "Select delivery method for statistical report."
+msgstr "حدد طريقة التسليم للتقرير الإحصائي."
+
+#: includes/admin/templates/settings/notifications.php:137
+msgid "Note: To send SMS text messages please install the %s plugin."
+msgstr "ملاحظة: لإرسال رسائل نصية SMS الرجاء تثبيت إضافة %s."
+
+#: includes/admin/templates/settings/notifications.php:137
+msgid "WordPress SMS"
+msgstr "الرسائل النصية"
+
+#: includes/admin/templates/settings/notifications.php:149
+msgid "Enter the contents of the report."
+msgstr "أدخل محتويات التقرير."
+
+#: includes/admin/templates/settings/notifications.php:160
+#: includes/class-wp-statistics-admin-bar.php:97
+#: includes/class-wp-statistics-widget.php:69
+#: includes/class-wp-statistics-widget.php:280
+msgid "Yesterday's Visitors"
+msgstr "زوار الأمس"
+
+#: includes/admin/templates/settings/notifications.php:162
+#: includes/class-wp-statistics-admin-bar.php:101
+#: includes/class-wp-statistics-widget.php:62
+#: includes/class-wp-statistics-widget.php:276
+msgid "Yesterday's Visits"
+msgstr "زيارات الأمس"
+
+#: includes/admin/templates/settings/notifications.php:164
+#: includes/class-wp-statistics-widget.php:104
+#: includes/class-wp-statistics-widget.php:300
+msgid "Total Visitors"
+msgstr "مجموع الزوار"
+
+#: includes/admin/templates/settings/notifications.php:166
+#: includes/class-wp-statistics-widget.php:97
+#: includes/class-wp-statistics-widget.php:296
+msgid "Total Visits"
+msgstr "مجموع الزيارات"
+
+#: includes/class-wp-statistics-shortcode.php:212
+msgid "None"
+msgstr "لا شيء"
+
+#: includes/admin/templates/layout/tabs-settings.php:13
+msgid "About"
+msgstr "حول"
+
+#: includes/admin/templates/settings/overview-display.php:10
+msgid "The following items are global to all users."
+msgstr "العناصر التالية هي عالمية لجميع المستخدمين."
+
+#: includes/admin/templates/layout/tabs-settings.php:3
+msgid "General"
+msgstr "عام"
+
+#: includes/admin/templates/layout/tabs-settings.php:6
+msgid "Notifications"
+msgstr "الإشعارات"
+
+#: includes/admin/templates/layout/tabs-settings.php:11
+msgid "Maintenance"
+msgstr "صيانة"
+
+#: includes/class-wp-statistics-schedule.php:112
+msgid "Once Every 2 Weeks"
+msgstr "مرة كل 2 أسابيع"
+
+#: includes/class-wp-statistics-schedule.php:116
+msgid "Once Every 4 Weeks"
+msgstr "مرة كل 4 أسابيع"
+
+#: includes/admin/class-wp-statistics-admin-network.php:26
+#: includes/class-wp-statistics-menus.php:159
+#: includes/class-wp-statistics-widget.php:15
+msgid "Statistics"
+msgstr "الاحصائيات"
+
+#: includes/class-wp-statistics-widget.php:16
+msgid "Show site stats in sidebar."
+msgstr "عرض احصائيات الموقع في الشريط الجانبي."
+
+#: includes/class-wp-statistics-widget.php:111
+#: includes/class-wp-statistics-widget.php:304
+msgid "Total Page Views"
+msgstr "مجموع مشاهدات الصفحة"
+
+#: includes/class-wp-statistics-widget.php:125
+#: includes/class-wp-statistics-widget.php:331
+msgid "Total Posts"
+msgstr "إجمالي المشاركات"
+
+#: includes/class-wp-statistics-widget.php:132
+#: includes/class-wp-statistics-widget.php:335
+msgid "Total Pages"
+msgstr "إجمالي الصفحات"
+
+#: includes/class-wp-statistics-widget.php:139
+#: includes/class-wp-statistics-widget.php:339
+msgid "Total Comments"
+msgstr "إجمالي التعليقات"
+
+#: includes/class-wp-statistics-widget.php:146
+#: includes/class-wp-statistics-widget.php:343
+msgid "Total Spams"
+msgstr "إجمالي السبام"
+
+#: includes/class-wp-statistics-widget.php:153
+#: includes/class-wp-statistics-widget.php:347
+msgid "Total Users"
+msgstr "عدد الاعضاء"
+
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:49
+#: includes/class-wp-statistics-shortcode.php:181
+#: includes/class-wp-statistics-widget.php:181
+#: includes/class-wp-statistics-widget.php:363
+msgid "Last Post Date"
+msgstr "تاريخ آخر مشاركة"
+
+#: includes/class-wp-statistics-widget.php:255
+msgid "Name"
+msgstr "الأسم"
+
+#: includes/class-wp-statistics-widget.php:260
+msgid "Items"
+msgstr "البنود"
+
+#: includes/class-wp-statistics-widget.php:313
+msgid "Select type of search engine"
+msgstr "حدد نوع من محرك البحث"
+
+#. Plugin Name of the plugin
+#: includes/admin/class-wp-statistics-admin-privacy.php:25
+msgid "WP Statistics"
+msgstr "احصائيات ووردبريس"
+
+#: includes/admin/class-wp-statistics-admin-network.php:72
+#: includes/class-wp-statistics-install.php:303
+#: includes/class-wp-statistics-menus.php:284
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: includes/class-wp-statistics-install.php:320
+msgid "Click here to visit the plugin on WordPress.org"
+msgstr "انقر هنا لزيارة صفحة الإضافة على WordPress.org"
+
+#: includes/class-wp-statistics-install.php:320
+msgid "Visit WordPress.org page"
+msgstr "زيارة صفحة WordPress.org"
+
+#: includes/class-wp-statistics-install.php:322
+msgid "Click here to rate and review this plugin on WordPress.org"
+msgstr "أنقر هنا لمراجهة وتقييم الإضافة على WordPress.org"
+
+#: includes/admin/class-wp-statistics-admin-network.php:64
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:40
+#: includes/class-wp-statistics-shortcode.php:172
+msgid "Searches"
+msgstr "عمليات البحث"
+
+#: includes/admin/templates/settings/exclusions.php:141
+msgid "GeoIP Exclusions"
+msgstr "استثناءات GeoIP"
+
+#: includes/admin/templates/settings/exclusions.php:166
+msgid "Host Exclusions"
+msgstr "استثناءات المضيف"
+
+#: includes/admin/templates/settings/exclusions.php:184
+msgid "Site URL Exclusions"
+msgstr "رابط الموقع المستثنى"
+
+#: includes/admin/templates/settings/exclusions.php:191
+msgid "Exclude the login page for registering as a hit."
+msgstr "استبعاد صفحة الدخول للتسجيل كنقرة."
+
+#: includes/admin/templates/settings/exclusions.php:198
+msgid "Exclude the RSS feeds for registering as a hit."
+msgstr "استبعاد آر إس إس لتسجيل كما ضرب."
+
+#: includes/admin/templates/add-ons.php:34
+msgid "Active"
+msgstr "تفعيل"
+
+#: includes/admin/templates/settings/externals.php:59
+#: includes/admin/templates/settings/externals.php:196
+msgid "Next update will be"
+msgstr "التحديث القادم سيكون في"
+
+#: includes/admin/templates/settings/maintenance.php:59
+msgid "A WP Cron job will be run daily to purge any users statistics data where the user has more than the defined number of hits in a day (aka they are probably a bot)."
+msgstr "سيتم تشغيل وظيفة الكرون يوميا لتطهير أي بيانات إحصاءات مستخدمين حيث يكون للمستخدم أكثر من عدد محدد من الزيارات في يوم واحد (ويعرف أيضا باسم أنها ربما بوت)."
+
+#: includes/admin/templates/settings/maintenance.php:47
+msgid "Purge High Hit Count Visitors Daily"
+msgstr "تطهير النقرات العالية في عدد الزوار يوميا"
+
+#: includes/admin/templates/settings/maintenance.php:25
+msgid "A WP Cron job will be run daily to purge any data older than a set number of days."
+msgstr "سيتم تشغيل وظيفة الكرون يوميا لتطهير أي بيانات أقدم من عدد الأيام المحدد."
+
+#: includes/admin/templates/settings/maintenance.php:14
+msgid "Purge Old Data Daily"
+msgstr "تطهير البيانات القديمة يوميا"
+
+#: includes/admin/templates/settings/general.php:33
+msgid "Seconds"
+msgstr "ثواني"
+
+#: includes/admin/class-wp-statistics-admin-notices.php:127
+msgid "The following features are disabled, please go to %ssettings page%s and enable them: %s"
+msgstr "الميزات التالية معطلة، يرجى الذهاب إلى %sصفحة الإعدادات%s وتمكينها: %s"
+
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:45
+#: includes/class-wp-statistics-shortcode.php:177
+msgid "User Count"
+msgstr "عدد المستخدمين"
+
+#: includes/class-wp-statistics-shortcode.php:203
+msgid "Number Format"
+msgstr "تنسيق الرقم"
+
+#: includes/admin/templates/layout/tabs-settings.php:7
+#: includes/admin/templates/settings/overview-display.php:15
+msgid "Dashboard"
+msgstr "لوحة التحكم"
+
+#: includes/class-wp-statistics-schedule.php:108
+msgid "Once Weekly"
+msgstr "مرة أسبوعيًا"
+
+#: includes/class-wp-statistics-install.php:322
+msgid "Rate this plugin"
+msgstr "تقييم هذه الإضافة"
+
+#: includes/admin/templates/optimization/purging.php:245
+msgid "Purge visitors with more than:"
+msgstr "الزوار المطهرين مع أكثر من"
+
+#: includes/admin/templates/settings/about.php:35
+msgid "Donate"
+msgstr "التبرع"
+
+#: includes/admin/templates/settings/access-level.php:81
+#: includes/admin/templates/settings/exclusions.php:220
+#: includes/admin/templates/settings/externals.php:178
+#: includes/admin/templates/settings/externals.php:216
+#: includes/admin/templates/settings/general.php:367
+#: includes/admin/templates/settings/maintenance.php:78
+#: includes/admin/templates/settings/notifications.php:198
+#: includes/admin/templates/settings/overview-display.php:54
+#: includes/admin/templates/settings/privacy.php:49
+#: includes/admin/templates/settings/reset.php:23
+#: includes/admin/templates/settings/visitor-ip.php:155
+msgid "Update"
+msgstr "تحديث"
+
+#: includes/admin/templates/optimization/historical.php:48
+#: includes/admin/templates/optimization/updates.php:19
+#: includes/admin/templates/optimization/updates.php:36
+msgid "Update Now!"
+msgstr "تحديث الآن!"
+
+#: includes/admin/templates/layout/tabs-optimization.php:3
+#: includes/admin/templates/optimization/export.php:9
+msgid "Export"
+msgstr "تصدير"
+
+#: includes/admin/templates/optimization/database.php:42
+#: includes/admin/templates/optimization/export.php:19
+#: includes/admin/templates/optimization/export.php:38
+#: includes/admin/templates/optimization/purging.php:211
+#: includes/admin/templates/optimization/purging.php:275
+#: includes/admin/templates/optimization/purging.php:299
+#: includes/admin/templates/settings/exclusions.php:119
+#: includes/admin/templates/settings/general.php:232
+#: includes/admin/templates/settings/notifications.php:93
+#: includes/admin/templates/settings/notifications.php:128
+msgid "Please select"
+msgstr "الرجاء تحديد"
+
+#: includes/admin/templates/optimization/export.php:27
+msgid "Select the table for the output file."
+msgstr "حدد الجدول لملف الإخراج."
+
+#: includes/admin/templates/optimization/export.php:44
+msgid "Select the output file type."
+msgstr "حدد نوع ملف الإخراج."
+
+#: includes/admin/templates/optimization/export.php:50
+msgid "Include Header Row:"
+msgstr "تضمين رأس الصف"
+
+#: includes/admin/templates/optimization/export.php:55
+msgid "Include a header row as the first line of the exported file."
+msgstr "تضمين صف الرأس كما في السطر الأول من الملف الذي تم تصديره."
+
+#: includes/admin/templates/optimization/export.php:56
+msgid "Start Now!"
+msgstr "ابدأ الآن!"
+
+#: includes/admin/templates/optimization/historical.php:16
+msgid "Historical Values"
+msgstr "القيم التاريخية"
+
+#: includes/admin/templates/optimization/historical.php:21
+msgid "Note: As you have just purged the database you must reload this page for these numbers to be correct."
+msgstr "ملاحظة: كلما قمت بتطهير قاعدة البيانات يجب تحميل هذه الصفحة لتكون الأرقام صحيحة."
+
+#: includes/admin/class-wp-statistics-admin-assets.php:233
+#: includes/admin/class-wp-statistics-admin-network.php:66
+#: includes/admin/pages/class-wp-statistics-admin-page-visitors.php:32
+#: includes/admin/templates/optimization/historical.php:27
+#: includes/admin/templates/pages/hits.php:25
+#: includes/admin/templates/pages/page-chart.php:22
+#: includes/admin/templates/settings/general.php:77
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:38
+#: includes/class-wp-statistics-menus.php:186
+#: includes/class-wp-statistics-shortcode.php:170
+msgid "Visitors"
+msgstr "الزوار"
+
+#: includes/admin/templates/optimization/historical.php:31
+msgid "Number of historical number of visitors to the site (current value is %s)."
+msgstr "العدد التاريخي لزوار الموقع (القيمة الحالية هي %s)."
+
+#: includes/admin/templates/optimization/historical.php:41
+msgid "Number of historical number of visits to the site (current value is %s)."
+msgstr "العدد التاريخي لزيارات الموقع (القيمة الحالية هي %s)."
+
+#: includes/admin/templates/optimization/purging.php:10
+#: includes/admin/templates/optimization/purging.php:42
+#: includes/admin/templates/optimization/purging.php:73
+#: includes/admin/templates/optimization/purging.php:104
+#: includes/admin/templates/optimization/purging.php:137
+#: includes/admin/templates/optimization/purging.php:170
+msgid "Are you sure?"
+msgstr "هل أنت متأكد؟"
+
+#: includes/admin/templates/optimization/purging.php:201
+msgid "Data"
+msgstr "المعطيات"
+
+#: includes/admin/templates/optimization/purging.php:220
+msgid "All data table will be lost."
+msgstr "سيتم فقدان جميع البيانات الجدول."
+
+#: includes/admin/templates/optimization/purging.php:221
+msgid "Clear now!"
+msgstr "مسح الآن!"
+
+#: includes/admin/templates/optimization/purging.php:229
+msgid "Purge records older than:"
+msgstr "سجلات الضخ أقدم من"
+
+#: includes/admin/templates/optimization/purging.php:237
+#: includes/admin/templates/optimization/purging.php:253
+msgid "Purge now!"
+msgstr "ضخ الآن!"
+
+#: includes/admin/templates/optimization/purging.php:265
+msgid "Delete User Agent Types"
+msgstr "حذف أنواع وكيل العضو"
+
+#: includes/admin/templates/optimization/purging.php:285
+msgid "All visitor data will be lost for this agent type."
+msgstr "سيتم فقد جميع البيانات الزائر لهذا النوع."
+
+#: includes/admin/templates/optimization/purging.php:286
+#: includes/admin/templates/optimization/purging.php:312
+#: includes/admin/templates/optimization/purging.php:327
+msgid "Delete now!"
+msgstr "حذف الآن!"
+
+#: includes/admin/templates/optimization/purging.php:311
+msgid "All visitor data will be lost for this platform type."
+msgstr "سيتم فقد جميع البيانات الزائر لنوع هذه المنصة."
+
+#: includes/admin/templates/optimization/resources.php:6
+msgid "Resources"
+msgstr "الموارد"
+
+#: includes/admin/templates/optimization/resources.php:11
+#: includes/admin/templates/optimization/resources.php:15
+msgid "Memory usage in PHP"
+msgstr "استخدام الذاكرة في PHP"
+
+#: includes/admin/templates/optimization/resources.php:26
+msgid "The memory limit a script is allowed to consume, set in php.ini."
+msgstr "حدود الذاكرة تسمح للبرنامج النصي باستهلاك حد معين، قم بتعيين ملف php.ini."
+
+#: includes/admin/templates/optimization/resources.php:35
+msgid "Number of rows in the %s table"
+msgstr "عدد الصفوف في جدول %s"
+
+#: includes/admin/templates/optimization/resources.php:38
+msgid "Row"
+msgid_plural "Rows"
+msgstr[0] "صف"
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: includes/admin/templates/optimization/resources.php:39
+msgid "Number of rows"
+msgstr "عدد الصفوف"
+
+#: includes/admin/templates/optimization/resources.php:52
+msgid "Version Info"
+msgstr "معلومات الإصدار"
+
+#: includes/admin/templates/optimization/resources.php:73
+msgid "The PHP version you are running."
+msgstr "إصدار PHP."
+
+#: includes/admin/templates/optimization/resources.php:79
+msgid "PHP Safe Mode"
+msgstr "الوضع الآمن PHP"
+
+#: includes/admin/templates/optimization/resources.php:110
+msgid "jQuery Version"
+msgstr "نسخة jQuery"
+
+#: includes/admin/templates/optimization/resources.php:118
+msgid "The jQuery version you are running."
+msgstr "إصدار jQuery."
+
+#: includes/admin/templates/optimization/resources.php:124
+msgid "cURL Version"
+msgstr "إصدار cURL"
+
+#: includes/admin/templates/optimization/resources.php:132
+msgid "cURL not installed"
+msgstr "cURL غير مثبت"
+
+#: includes/admin/templates/optimization/resources.php:147
+#: includes/admin/templates/optimization/resources.php:163
+#: includes/admin/templates/optimization/resources.php:179
+msgid "Installed"
+msgstr "مثبت"
+
+#: includes/admin/templates/add-ons.php:38
+#: includes/admin/templates/optimization/resources.php:149
+#: includes/admin/templates/optimization/resources.php:165
+#: includes/admin/templates/optimization/resources.php:181
+msgid "Not installed"
+msgstr "غير مثبت"
+
+#: includes/admin/templates/optimization/resources.php:194
+msgid "File Info"
+msgstr "معلومات عن الملف"
+
+#: includes/admin/templates/optimization/resources.php:199
+msgid "GeoIP Database"
+msgstr "قاعدة بيانات GeoIP"
+
+#: includes/admin/templates/optimization/resources.php:208
+msgid "Database file does not exist."
+msgstr "لا وجود لملف قاعدة البيانات."
+
+#: includes/admin/templates/optimization/resources.php:210
+msgid ", created on "
+msgstr "، التي تم إنشاؤها على"
+
+#: includes/admin/templates/optimization/resources.php:215
+msgid "The file size and date of the GeoIP database."
+msgstr "حجم الملف والتاريخ من قاعدة بيانات GeoIP."
+
+#: includes/admin/templates/optimization/resources.php:225
+msgid "Client Info"
+msgstr "معلومات العميل"
+
+#: includes/admin/templates/optimization/resources.php:230
+msgid "Client IP"
+msgstr "IP العميل"
+
+#: includes/admin/templates/optimization/resources.php:235
+msgid "The client IP address."
+msgstr "عنوان IP للعميل."
+
+#: includes/admin/templates/optimization/resources.php:241
+msgid "User Agent"
+msgstr "وكيل المستخدم"
+
+#: includes/admin/templates/optimization/resources.php:246
+msgid "The client user agent string."
+msgstr "سلسلة عامل المستخدم العميل."
+
+#: includes/admin/class-wp-statistics-admin-assets.php:254
+#: includes/admin/meta-box/wp-statistics-meta-box-browsers.php:162
+#: includes/admin/templates/optimization/resources.php:252
+#: includes/admin/templates/pages/online.php:11
+#: includes/admin/templates/pages/refer.url.php:31
+#: includes/admin/templates/pages/top-visitors.php:18
+#: includes/admin/templates/pages/visitors.php:25
+#: includes/admin/templates/pages/words.php:26
+msgid "Browser"
+msgstr "المتصفح"
+
+#: includes/admin/templates/optimization/resources.php:260
+msgid "The detected client browser."
+msgstr "مستكشف مستعرض العميل."
+
+#: includes/admin/templates/optimization/resources.php:271
+msgid "The detected client browser version."
+msgstr "إصدار مستكشف مستعرض العميل."
+
+#: includes/admin/templates/optimization/resources.php:282
+msgid "The detected client platform."
+msgstr "مستكشف منصة العميل"
+
+#: includes/admin/templates/optimization/updates.php:36
+msgid "This will replace all IP addresses in the database with hash values and cannot be undo, are you sure?"
+msgstr "سيؤدي ذلك إلى استبدال جميع عناوين IP في قاعدة البيانات مع قيم التجزئة ولا يمكن التراجع، هل أنت متأكد؟"
+
+#: includes/admin/templates/optimization/updates.php:9
+msgid "GeoIP Options"
+msgstr "خيارات GeoIP"
+
+#: includes/admin/templates/optimization/updates.php:20
+msgid "Updates any unknown location data in the database, this may take a while"
+msgstr "تحديث أي بيانات الموقع غير معروفة في قاعدة البيانات, هذا قد يستغرق بعض الوقت"
+
+#: includes/admin/templates/optimization/updates.php:26
+msgid "IP Addresses"
+msgstr "عناوين IP"
+
+#: includes/admin/templates/optimization/updates.php:37
+msgid "Replace IP addresses in the database with hash values, you will not be able to recover the IP addresses in the future to populate location information afterwards and this may take a while"
+msgstr "استبدال عناوين IP في قاعدة البيانات مع قيم التجزئة، فإنك لن تكون قادرا على استرداد عناوين IP في المستقبل لتجميع معلومات عن الموقع بعد ذلك وهذا قد يستغرق بعض الوقت"
+
+#: includes/admin/pages/class-wp-statistics-admin-page-optimization.php:57
+msgid "IP Addresses replaced with hash values."
+msgstr "استبدال عناوين IP مع قيم التجزئة."
+
+#: includes/admin/pages/class-wp-statistics-admin-page-optimization.php:65
+msgid "Install routine complete."
+msgstr "التثبيت الكامل الروتيني."
+
+#: includes/admin/templates/layout/tabs-optimization.php:2
+msgid "Resources/Information"
+msgstr "الموارد/معلومات"
+
+#: includes/admin/templates/layout/tabs-optimization.php:4
+msgid "Purging"
+msgstr "تطهير"
+
+#: includes/admin/templates/layout/tabs-optimization.php:5
+msgid "Database"
+msgstr "قاعدة البيانات"
+
+#: includes/admin/templates/layout/tabs-optimization.php:6
+msgid "Updates"
+msgstr "تحديثات"
+
+#: includes/admin/templates/layout/tabs-optimization.php:7
+msgid "Historical"
+msgstr "التاريخي"
+
+#: includes/admin/templates/settings/about.php:50
+msgid "Visit Us Online"
+msgstr "زورونا على الإنترنت"
+
+#: includes/admin/templates/settings/about.php:65
+msgid "Rate and Review at WordPress.org"
+msgstr "التقييم و المراجعة في WordPress.org"
+
+#: includes/admin/templates/settings/about.php:81
+msgid "Translations"
+msgstr "الترجمات"
+
+#: includes/admin/templates/settings/about.php:110
+msgid "FAQs"
+msgstr "أسئلة وأجوبة"
+
+#: includes/admin/templates/settings/about.php:126
+msgid "Have you search the Internet for any error messages you are receiving?"
+msgstr "هل بحثت في الإنترنت عن أي رسائل خطأ التي تظهر لك؟"
+
+#: includes/admin/templates/settings/about.php:130
+msgid "Make sure you have access to your PHP error logs."
+msgstr "تأكد أن لديك الوصول إلى سجلات الخطأ PHP الخاص بك."
+
+#: includes/admin/templates/settings/about.php:133
+msgid "And a few things to double-check:"
+msgstr "وعدد قليل من الأشياء الأخرى:"
+
+#: includes/admin/templates/settings/about.php:136
+msgid "How's your memory_limit in php.ini?"
+msgstr "كيف حال memory_limit الخاصة بك في ملف php.ini؟"
+
+#: includes/admin/templates/settings/about.php:137
+msgid "Have you tried disabling any other plugins you may have installed?"
+msgstr "هل حاولت تعطيل أي إضافات أخرى التي قد تم تثبيتها؟"
+
+#: includes/admin/templates/settings/about.php:141
+msgid "Have you tried using the default WordPress theme?"
+msgstr "هل حاولت استخدام المظهر الافتراضي للوردبريس؟"
+
+#: includes/admin/templates/settings/about.php:142
+msgid "Have you double checked the plugin settings?"
+msgstr "هل ضاعفت الفحص على إعدادات البرنامج المساعد؟"
+
+#: includes/admin/templates/settings/about.php:143
+msgid "Do you have all the required PHP extensions installed?"
+msgstr "هل قمت بتثبيت جميع ملحقات PHP المطلوبة؟"
+
+#: includes/admin/templates/settings/about.php:153
+msgid "Have you checked your PHP and web server error logs?"
+msgstr "هل راجعت سجل أخطاء الـPHP الخاص بك؟"
+
+#: includes/admin/templates/settings/about.php:156
+msgid "Still not having any luck?"
+msgstr "لم يحالفك الحظ حتى الآن؟"
+
+#: includes/admin/templates/settings/access-level.php:71
+msgid "Hint: manage_network = Super Admin Network, manage_options = Administrator, edit_others_posts = Editor, publish_posts = Author, edit_posts = Contributor, read = Everyone."
+msgstr "تلميح:  manage_network = مسؤول, manage_options = مدير, edit_others_posts = محرر, publish_posts = كاتب, edit_posts = مساهم, read = الجميع"
+
+#: includes/admin/templates/settings/exclusions.php:12
+#: includes/admin/templates/settings/exclusions.php:76
+#: includes/admin/templates/settings/exclusions.php:111
+#: includes/admin/templates/settings/exclusions.php:130
+#: includes/admin/templates/settings/externals.php:24
+#: includes/admin/templates/settings/externals.php:41
+#: includes/admin/templates/settings/externals.php:56
+#: includes/admin/templates/settings/externals.php:95
+#: includes/admin/templates/settings/externals.php:165
+#: includes/admin/templates/settings/externals.php:193
+#: includes/admin/templates/settings/general.php:21
+#: includes/admin/templates/settings/general.php:45
+#: includes/admin/templates/settings/general.php:66
+#: includes/admin/templates/settings/general.php:86
+#: includes/admin/templates/settings/general.php:97
+#: includes/admin/templates/settings/general.php:108
+#: includes/admin/templates/settings/general.php:138
+#: includes/admin/templates/settings/general.php:149
+#: includes/admin/templates/settings/general.php:165
+#: includes/admin/templates/settings/general.php:203
+#: includes/admin/templates/settings/general.php:215
+#: includes/admin/templates/settings/general.php:256
+#: includes/admin/templates/settings/general.php:292
+#: includes/admin/templates/settings/general.php:313
+#: includes/admin/templates/settings/general.php:358
+#: includes/admin/templates/settings/maintenance.php:24
+#: includes/admin/templates/settings/maintenance.php:58
+#: includes/admin/templates/settings/notifications.php:43
+#: includes/admin/templates/settings/notifications.php:55
+#: includes/admin/templates/settings/notifications.php:76
+#: includes/admin/templates/settings/notifications.php:190
+#: includes/admin/templates/settings/privacy.php:18
+#: includes/admin/templates/settings/privacy.php:29
+#: includes/admin/templates/settings/privacy.php:41
+msgid "Enable"
+msgstr "تمكين"
+
+#: includes/admin/templates/settings/exclusions.php:23
+msgid "Exclude User Roles"
+msgstr "استبعاد أدوار المستخدم"
+
+#: includes/admin/templates/settings/exclusions.php:40
+msgid "Exclude %s role from data collection."
+msgstr "استبعاد دور %s من جمع البيانات."
+
+#: includes/admin/templates/settings/exclusions.php:51
+msgid "IP/Robot Exclusions"
+msgstr "استثناءات IP/Robot"
+
+#: includes/admin/templates/settings/exclusions.php:67
+msgid "Reset to Default"
+msgstr "إعادة تعيين إلى الافتراضي"
+
+#: includes/admin/templates/settings/exclusions.php:87
+msgid "Treat visitors with more than this number of visits per day as robots. 0 = disabled."
+msgstr "تعامل للزوار أكثر من هذا العدد من مرة في اليوم الواحد كما الروبوتات. 0 = تعطيل."
+
+#: includes/admin/templates/settings/exclusions.php:39
+#: includes/admin/templates/settings/exclusions.php:190
+#: includes/admin/templates/settings/exclusions.php:197
+#: includes/admin/templates/settings/exclusions.php:204
+msgid "Exclude"
+msgstr "استثناء"
+
+#: includes/admin/templates/optimization/resources.php:68
+msgid "PHP Version"
+msgstr "إصدار PHP"
+
+#: includes/admin/templates/optimization/resources.php:21
+msgid "PHP Memory Limit"
+msgstr "حد ذاكرة PHP"
+
+#: includes/admin/templates/settings/about.php:96
+msgid "Support"
+msgstr "الدعم الفني"
+
+#: includes/class-wp-statistics-search-engine.php:37
+msgid "Ask.com"
+msgstr "Ask.com"
+
+#: includes/class-wp-statistics-exclusion.php:26
+msgid "Referrer Spam"
+msgstr "إحالات البريد المزعج"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:242
+#: includes/admin/templates/pages/refer.url.php:35
+#: includes/admin/templates/pages/top-visitors.php:2
+#: includes/admin/templates/pages/top-visitors.php:25
+#: includes/admin/templates/pages/visitors.php:34
+#: includes/admin/templates/pages/words.php:33
+msgid "Date"
+msgstr "تاريخ"
+
+#: includes/class-wp-statistics-purge.php:220
+msgid "No visitors found to purge."
+msgstr "لم يتم إيجاد زوار في التطهير."
+
+#: includes/class-wp-statistics-purge.php:216
+msgid "%s records purged successfully."
+msgstr "%s سجلات طهرت بنجاح."
+
+#: includes/admin/class-wp-statistics-admin-ajax.php:284
+#: includes/class-wp-statistics-purge.php:223
+msgid "Number of hits must be greater than or equal to 10!"
+msgstr "عدد الزيارات يجب أن يكون أكبر من أو يساوي 10!"
+
+#: includes/admin/class-wp-statistics-admin-notices.php:100
+msgid "Donate Now!"
+msgstr "تبرع الآن!"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:267
+#: includes/admin/templates/layout/date.range.php:48
+msgid "to"
+msgstr "إلى"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:269
+#: includes/admin/templates/layout/date.range.php:50
+#: includes/admin/templates/pages/top-visitors.php:5
+msgid "Go"
+msgstr "إذهب"
+
+#: includes/class-wp-statistics-exclusion.php:29
+msgid "Excluded URL"
+msgstr "العناوين المستبعدة"
+
+#: includes/class-wp-statistics-search-engine.php:97
+msgid "Yahoo!"
+msgstr "ياهو!"
+
+#: includes/class-wp-statistics-search-engine.php:107
+msgid "Yandex"
+msgstr "ياندكس"
+
+#: includes/class-wp-statistics-search-engine.php:67
+msgid "clearch.org"
+msgstr "clearch.org"
+
+#: includes/class-wp-statistics-search-engine.php:77
+msgid "DuckDuckGo"
+msgstr "دك دك غو"
+
+#: includes/class-wp-statistics-search-engine.php:57
+msgid "Bing"
+msgstr "بينج"
+
+#: includes/class-wp-statistics-search-engine.php:47
+msgid "Baidu"
+msgstr "بايدو"
+
+#: includes/class-wp-statistics-exclusion.php:30
+msgid "User Role"
+msgstr "دور المستخدم"
+
+#: includes/class-wp-statistics-exclusion.php:24
+#: includes/class-wp-statistics-pages.php:358
+msgid "Login Page"
+msgstr "صفحة تسجيل الدخول"
+
+#: includes/class-wp-statistics-exclusion.php:25
+msgid "Admin Page"
+msgstr "صفحة الإدارة"
+
+#: includes/class-wp-statistics-exclusion.php:23
+msgid "Self Referral"
+msgstr "الإحالة الذاتية"
+
+#: includes/class-wp-statistics-exclusion.php:22
+msgid "IP Match"
+msgstr "المتطابق IP"
+
+#: includes/class-wp-statistics-exclusion.php:20
+msgid "Robot"
+msgstr "روبوت"
+
+#: includes/class-wp-statistics-exclusion.php:32
+msgid "GeoIP"
+msgstr "GeoIP"
+
+#: includes/class-wp-statistics-search-engine.php:87
+msgid "Google"
+msgstr "جوجل"
+
+#: includes/class-wp-statistics-meta-box.php:79
+msgid "Quick Stats"
+msgstr "إحصائيات سريعة"
+
+#: includes/class-wp-statistics-meta-box.php:93
+msgid "Top 10 Browsers"
+msgstr "أفضل 10 متصفحات"
+
+#: includes/class-wp-statistics-meta-box.php:123
+msgid "Top 10 Countries"
+msgstr "أعلى 10 دول"
+
+#: includes/class-wp-statistics-meta-box.php:178
+msgid "Today's Visitors Map"
+msgstr "خريطة زوار اليوم"
+
+#: includes/admin/pages/class-wp-statistics-admin-page-hits.php:34
+#: includes/class-wp-statistics-meta-box.php:139
+#: includes/class-wp-statistics-meta-box.php:209
+msgid "Hit Statistics"
+msgstr "احصائية النقرات"
+
+#: includes/class-wp-statistics-meta-box.php:155
+msgid "Top 10 Pages"
+msgstr "أفضل 10 صفحات"
+
+#: includes/admin/pages/class-wp-statistics-admin-page-visitors.php:32
+#: includes/class-wp-statistics-meta-box.php:171
+msgid "Recent Visitors"
+msgstr "الزيارات الأخيرة"
+
+#: includes/admin/pages/class-wp-statistics-admin-page-refer.php:37
+msgid "Top Referring Sites"
+msgstr "أعلى المواقع اشارة"
+
+#: includes/admin/meta-box/wp-statistics-meta-box-summary.php:33
+#: includes/class-wp-statistics-meta-box.php:147
+#: includes/class-wp-statistics-widget.php:118
+#: includes/class-wp-statistics-widget.php:308
+msgid "Search Engine Referrals"
+msgstr "إحالات محرك البحث"
+
+#: includes/admin/pages/class-wp-statistics-admin-page-words.php:36
+#: includes/class-wp-statistics-meta-box.php:194
+msgid "Latest Search Words"
+msgstr "أحدث كلمات البحث"
+
+#: includes/class-wp-statistics-meta-box.php:163
+msgid "Top 10 Visitors Today"
+msgstr "أفضل 10 زوار اليوم"
+
+#: includes/admin/meta-box/wp-statistics-meta-box-post.php:21
+msgid "This post is not yet published."
+msgstr "لم يتم نشر هذا المقال حتى الآن."
+
+#: includes/class-wp-statistics-geoip.php:398
+msgid "Unable to load the GeoIP database, make sure you have downloaded it in the settings page."
+msgstr "غير قادر على تحميل قاعدة البيانات GeoIP، تأكد من أنك قمت بتنزيلها في صفحة الإعدادات."
+
+#: includes/class-wp-statistics-geoip.php:429
+msgid "Updated %s GeoIP records in the visitors database."
+msgstr "تحديث السجلات %s  GeoIP في قاعدة بيانات الزوار."
+
+#: includes/class-wp-statistics-purge.php:46
+#: includes/class-wp-statistics-purge.php:76
+#: includes/class-wp-statistics-purge.php:87
+#: includes/class-wp-statistics-purge.php:97
+#: includes/class-wp-statistics-purge.php:160
+msgid "%s data older than %s days purged successfully."
+msgstr "البيانات %s مضى عليها أكثر من %s أيام طهرت فيه بنجاح."
+
+#: includes/class-wp-statistics-purge.php:48
+#: includes/class-wp-statistics-purge.php:78
+#: includes/class-wp-statistics-purge.php:89
+#: includes/class-wp-statistics-purge.php:99
+#: includes/class-wp-statistics-purge.php:162
+msgid "No records found to purge from %s!"
+msgstr "لا توجد سجلات للتخلص من %s!"
+
+#: includes/class-wp-statistics-purge.php:167
+#: includes/class-wp-statistics-purge.php:227
+msgid "Database pruned on"
+msgstr "قاعدة بيانات مجردة على"
+
+#: includes/class-wp-statistics-purge.php:172
+msgid "Please select a value over 30 days."
+msgstr "يرجى تحديد قيمة أكثر من 30 يوما."
+
+#: includes/admin/pages/class-wp-statistics-admin-page-browsers.php:37
+msgid "Browser Statistics"
+msgstr "إحصائيات المتصفح"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:244
+#: includes/admin/class-wp-statistics-admin-network.php:68
+#: includes/class-wp-statistics-menus.php:249
+msgid "Browsers"
+msgstr "المتصفحات"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:260
+#: includes/admin/templates/optimization/resources.php:277
+#: includes/admin/templates/pages/top-visitors.php:27
+#: includes/admin/templates/pages/visitors.php:39
+msgid "Platform"
+msgstr "المنصة"
+
+#: includes/admin/pages/class-wp-statistics-admin-page-exclusions.php:35
+msgid "Exclusions Statistics"
+msgstr "استثناءات الاحصائيات"
+
+#: includes/admin/class-wp-statistics-admin-template.php:217
+msgid "10 Days"
+msgstr "10 أيام"
+
+#: includes/admin/class-wp-statistics-admin-template.php:218
+msgid "20 Days"
+msgstr "20 يوم"
+
+#: includes/admin/class-wp-statistics-admin-template.php:219
+msgid "30 Days"
+msgstr "30 يو م"
+
+#: includes/admin/class-wp-statistics-admin-template.php:220
+msgid "2 Months"
+msgstr "شهرين"
+
+#: includes/admin/class-wp-statistics-admin-template.php:221
+msgid "3 Months"
+msgstr "3 أشهر"
+
+#: includes/admin/class-wp-statistics-admin-template.php:222
+msgid "6 Months"
+msgstr "6 أشهر"
+
+#: includes/admin/class-wp-statistics-admin-template.php:223
+msgid "9 Months"
+msgstr "9 أشهر"
+
+#: includes/admin/class-wp-statistics-admin-template.php:224
+msgid "1 Year"
+msgstr "سنة"
+
+#: includes/admin/templates/pages/online.php:50
+#: includes/admin/templates/pages/refer.url.php:53
+#: includes/admin/templates/pages/top-visitors.php:59
+#: includes/admin/templates/pages/visitors.php:67
+#: includes/admin/templates/settings/overview-display.php:32
+msgid "Map"
+msgstr "خريطة"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:262
+#: includes/admin/templates/pages/online.php:20
+#: includes/admin/templates/pages/visitors.php:45
+msgid "Page"
+msgstr "صفحة"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:232
+#: includes/admin/pages/class-wp-statistics-admin-page-online.php:25
+#: includes/admin/templates/settings/general.php:11
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:36
+#: includes/class-wp-statistics-meta-box.php:185
+#: includes/class-wp-statistics-shortcode.php:168
+#: includes/class-wp-statistics-widget.php:41
+#: includes/class-wp-statistics-widget.php:264
+msgid "Online Users"
+msgstr "المستخدمين على الانترنت"
+
+#: includes/admin/templates/pages/online.php:19
+msgid "Online For"
+msgstr "متصل لـ"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:275
+#: includes/admin/class-wp-statistics-admin-template.php:230
+#: includes/admin/pages/class-wp-statistics-admin-page-authors.php:58
+#: includes/admin/pages/class-wp-statistics-admin-page-category.php:60
+#: includes/admin/pages/class-wp-statistics-admin-page-tags.php:61
+#: includes/admin/pages/class-wp-statistics-admin-page-visitors.php:54
+#: includes/admin/pages/class-wp-statistics-admin-page-words.php:44
+#: includes/admin/templates/optimization/database.php:48
+#: includes/admin/templates/optimization/purging.php:217
+#: includes/admin/templates/pages/refer.url.php:3
+#: includes/admin/templates/pages/top.refer.php:4
+#: includes/class-wp-statistics-widget.php:326
+msgid "All"
+msgstr "الكل"
+
+#: includes/admin/pages/class-wp-statistics-admin-page-searches.php:34
+msgid "Search Engine Referral Statistics"
+msgstr "إحصائيات مرجعية محرك البحث"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:240
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:59
+msgid "Total"
+msgstr "المجموع"
+
+#: includes/admin/pages/class-wp-statistics-admin-page-country.php:36
+msgid "Top Countries"
+msgstr "أفضل الدول"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:245
+msgid "Rank"
+msgstr "الترتيب"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:246
+msgid "Flag"
+msgstr "العلم"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:247
+#: includes/admin/templates/pages/online.php:13
+#: includes/admin/templates/pages/refer.url.php:33
+#: includes/admin/templates/pages/top-visitors.php:20
+#: includes/admin/templates/pages/top.refer.php:24
+#: includes/admin/templates/pages/visitors.php:27
+#: includes/admin/templates/pages/words.php:28
+msgid "Country"
+msgstr "الدولة"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:248
+msgid "Visitor Count"
+msgstr "عدد الزوار"
+
+#: includes/admin/pages/class-wp-statistics-admin-page-pages.php:63
+msgid "Top Pages"
+msgstr "أفضل الصفحات"
+
+#: includes/admin/meta-box/wp-statistics-meta-box-post.php:61
+msgid "Number of Hits"
+msgstr "عدد الزيارات"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:234
+#: includes/admin/class-wp-statistics-admin-user.php:33
+#: includes/admin/templates/optimization/historical.php:37
+#: includes/admin/templates/pages/hits.php:23
+#: includes/admin/templates/pages/pages.php:41
+#: includes/admin/templates/settings/general.php:56
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:37
+#: includes/class-wp-statistics-shortcode.php:169
+msgid "Visits"
+msgstr "الزيارات"
+
+#: includes/admin/meta-box/wp-statistics-meta-box-referring.php:36
+#: includes/admin/templates/pages/top.refer.php:26
+msgid "References"
+msgstr "المراجع"
+
+#: includes/admin/meta-box/wp-statistics-meta-box-browsers.php:123
+msgid "Other"
+msgstr "أخرى"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:252
+msgid "Address"
+msgstr "العنوان"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:235
+#: includes/admin/class-wp-statistics-admin-assets.php:353
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:54
+msgid "Today"
+msgstr "اليوم"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:236
+#: includes/admin/TinyMCE/class-wp-statistics-tinymce.php:55
+msgid "Yesterday"
+msgstr "الأمس"
+
+#: includes/admin/meta-box/wp-statistics-meta-box-summary.php:34
+msgid "Current Time and Date"
+msgstr "التوقيت الحالي و التاريخ"
+
+#: includes/admin/meta-box/wp-statistics-meta-box-summary.php:35
+msgid "(Adjustment)"
+msgstr "(التوافق)"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:258
+#: includes/admin/class-wp-statistics-admin-network.php:60
+#: includes/admin/class-wp-statistics-admin-post.php:60
+#: includes/admin/class-wp-statistics-admin-post.php:155
+#: includes/admin/class-wp-statistics-admin-taxonomy.php:56
+#: includes/admin/class-wp-statistics-admin-taxonomy.php:63
+#: includes/admin/templates/optimization/purging.php:250
+#: includes/admin/templates/pages/top-visitors.php:30
+#: includes/admin/templates/pages/visitors.php:40
+#: includes/admin/templates/settings/maintenance.php:70
+#: includes/class-wp-statistics-menus.php:172
+msgid "Hits"
+msgstr "نقرات"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:256
+#: includes/admin/templates/pages/online.php:18
+#: includes/admin/templates/pages/refer.url.php:30
+#: includes/admin/templates/pages/top-visitors.php:26
+#: includes/admin/templates/pages/visitors.php:38
+#: includes/admin/templates/pages/words.php:34
+msgid "IP"
+msgstr "IP"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:259
+msgid "Agent"
+msgstr "وكيل"
+
+#: includes/admin/class-wp-statistics-admin-assets.php:261
+#: includes/admin/templates/optimization/resources.php:266
+msgid "Version"
+msgstr "الإصدار"
+
+#: includes/admin/class-wp-statistics-admin-ajax.php:115
+#: includes/admin/class-wp-statistics-admin-ajax.php:152
+#: includes/admin/class-wp-statistics-admin-ajax.php:188
+#: includes/admin/class-wp-statistics-admin-ajax.php:218
+#: includes/admin/class-wp-statistics-admin-ajax.php:235
+#: includes/admin/class-wp-statistics-admin-ajax.php:260
+#: includes/admin/class-wp-statistics-admin-ajax.php:289
+msgid "Access denied!"
+msgstr "تم رفض الوصول!"
+
+#: includes/admin/class-wp-statistics-admin-ajax.php:108
+msgid "No agent data found to remove!"
+msgstr "لا توجد بيانات وكيل لإزالتها!"
+
+#: includes/admin/class-wp-statistics-admin-ajax.php:112
+#: includes/admin/class-wp-statistics-admin-ajax.php:149
+#: includes/admin/class-wp-statistics-admin-ajax.php:185
+#: includes/admin/class-wp-statistics-admin-ajax.php:207
+msgid "Please select the desired items."
+msgstr "يرجى تحديد العناصر المطلوبة."
+
+#: includes/admin/class-wp-statistics-admin-ajax.php:144
+msgid "%s platform data deleted successfully."
+msgstr "%s تم حذف بيانات المنصة بنجاح."
+
+#: includes/admin/class-wp-statistics-admin-ajax.php:146
+msgid "No platform data found to remove!"
+msgstr "لا توجد بيانات منصة لإزالتها!"
+
+#: includes/class-wp-statistics-db.php:134
+msgid "%s table data deleted successfully."
+msgstr "%s تم حذف بيانات الجدول بنجاح."
+
+#: includes/class-wp-statistics-db.php:138
+msgid "Error, %s not emptied!"
+msgstr "خطأ, %s لم يتم التفريغ!"
+
+#: includes/admin/templates/optimization/database.php:8
+msgid "Database Setup"
+msgstr "إعداد قاعدة البيانات"
+
+#: includes/admin/templates/optimization/database.php:13
+msgid "Re-run Install:"
+msgstr "إعادة تشغيل التثبيت"
+
+#: includes/admin/templates/optimization/database.php:17
+msgid "Install Now!"
+msgstr "تثبيت الآن!"
+
+#: includes/admin/class-wp-statistics-admin-network.php:67
+#: includes/class-wp-statistics-menus.php:221
+msgid "Countries"
+msgstr "الدول"
+
+#: includes/admin/class-wp-statistics-admin-network.php:70
+#: includes/admin/templates/layout/tabs-settings.php:9
+#: includes/admin/templates/pages/exclusions.php:22
+#: includes/admin/templates/settings/exclusions.php:5
+#: includes/class-wp-statistics-menus.php:270
+#: includes/class-wp-statistics-meta-box.php:225
+msgid "Exclusions"
+msgstr "الاستثناءات"
+
+#: includes/admin/meta-box/wp-statistics-meta-box-hits.php:91
+msgid "Hits in the last %s days"
+msgstr "النقرات في %s يوما الماضية"
+
+#: includes/class-wp-statistics-meta-box.php:86
+msgid "Summary"
+msgstr "ملخّص (موجز)"
+
+#: includes/admin/class-wp-statistics-admin-ajax.php:106
+msgid "%s agent data deleted successfully."
+msgstr "%s تم حذف بيانات الوكيل بنجاح."
