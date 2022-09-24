@@ -124,7 +124,7 @@ if(  $userview_ != 'on' ){
             <tr>
 					<th class=""><?php echo $counts ?></th>
       <td>
-                    <a target ="_blanck" href="../?c=<?php echo $row['token']; ?>"><?php echo $row['name']; ?></a>
+                    <a target ="_blanck" href="../?c=<?php echo $row['token']; ?>&p=<?php echo $row['project']?>&b=<?php echo $row['bulding']?>"><?php echo $row['name']; ?></a>
                     </td>
 
       <td class="text-center">
@@ -603,7 +603,11 @@ if ($result == true){
     </script>
   <?php
 }
-}}
+}
+    if(isset($_SESSION["customersProjectBuildingDataForSession"])){
+        unset($_SESSION["customersProjectBuildingDataForSession"]);
+    }
+}
 ?>
 
 
@@ -662,7 +666,11 @@ if ($result == true){
     </script>
   <?php
 }
-}}
+}
+    if(isset($_SESSION["customersProjectBuildingDataForSession"])){
+        unset($_SESSION["customersProjectBuildingDataForSession"]);
+    }
+}
 ?>
 
 
@@ -704,6 +712,9 @@ if ($result == true){
     </script>
   <?php
 }
+    if(isset($_SESSION["customersProjectBuildingDataForSession"])){
+        unset($_SESSION["customersProjectBuildingDataForSession"]);
+    }
 }
 ?>
 
@@ -737,6 +748,9 @@ if ($result == true){
     </script>
   <?php
 }
+    if(isset($_SESSION["customersProjectBuildingDataForSession"])){
+        unset($_SESSION["customersProjectBuildingDataForSession"]);
+    }
 }
 ?>
 
@@ -757,7 +771,11 @@ $result=$conn->query($sql);
     </script>
 
     <?php
- }}
+ }
+    if(isset($_SESSION["customersProjectBuildingDataForSession"])){
+        unset($_SESSION["customersProjectBuildingDataForSession"]);
+    }
+}
 ?>
 <?php
 include "file/footer.php";

@@ -80,6 +80,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <link rel='stylesheet' id='elementskit-rtl-css'  href='assets/css/rtl.css?ver=2.7.0' media='all' />
 <link rel='stylesheet' id='site-reviews-css'  href='assets/css/default.css?ver=5.25.1' media='all' />
 <link rel="stylesheet" href="assets/css/countDown.css"  type="text/css"/>
+<link rel="stylesheet" href="assets/css/whatapp.css" type="text/css"/>
     <style id='site-reviews-inline-css'>
 .gl-star-rating--stars[class*=" s"]>span,.glsr-star-empty{background-image:url(https://project.floteksa.com/wp-content/plugins/site-reviews/assets/images/star-empty.svg)!important}.glsr-field-is-invalid .gl-star-rating--stars[class*=" s"]>span{background-image:url(https://project.floteksa.com/wp-content/plugins/site-reviews/assets/images/star-error.svg)!important}.glsr-star-half{background-image:url(https://project.floteksa.com/wp-content/plugins/site-reviews/assets/images/star-half.svg)!important}.gl-star-rating--stars.s100>span,.gl-star-rating--stars.s10>span:first-child,.gl-star-rating--stars.s20>span:nth-child(-1n+2),.gl-star-rating--stars.s30>span:nth-child(-1n+3),.gl-star-rating--stars.s40>span:nth-child(-1n+4),.gl-star-rating--stars.s50>span:nth-child(-1n+5),.gl-star-rating--stars.s60>span:nth-child(-1n+6),.gl-star-rating--stars.s70>span:nth-child(-1n+7),.gl-star-rating--stars.s80>span:nth-child(-1n+8),.gl-star-rating--stars.s90>span:nth-child(-1n+9),.glsr-star-full{background-image:url(https://project.floteksa.com/wp-content/plugins/site-reviews/assets/images/star-full.svg)!important}.glsr-captcha-holder iframe{margin:0!important}
 
@@ -102,6 +103,7 @@ flexibility(document.documentElement);
 <link rel='shortlink' href='https://project.floteksa.com/?p=7' />
 <link rel="alternate" type="application/json+oembed" href="https://project.floteksa.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject.floteksa.com%2F%25d8%25a7%25d9%2584%25d8%25b1%25d8%25a6%25d9%258a%25d8%25b3%25d9%258a%25d8%25a9%2F" />
 <link rel="alternate" type="text/xml+oembed" href="https://project.floteksa.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject.floteksa.com%2F%25d8%25a7%25d9%2584%25d8%25b1%25d8%25a6%25d9%258a%25d8%25b3%25d9%258a%25d8%25a9%2F&#038;format=xml" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <?php $date =  $deliveryDate; ?>
 <body itemtype='https://schema.org/WebPage' itemscope='itemscope' class="rtl page-template page-template-elementor_header_footer page page-id-7 ehf-header ehf-footer ehf-template-astra ehf-stylesheet-astra ast-single-post ast-inherit-site-logo-transparent ast-hfb-header ast-header-break-point ast-page-builder-template ast-no-sidebar astra-3.9.1 elementor-default elementor-template-full-width elementor-kit-5 elementor-page elementor-page-7" onload="startCountDown(<?php echo strtotime($date);?>)">

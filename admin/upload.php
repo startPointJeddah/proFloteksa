@@ -138,6 +138,9 @@ echo '<label class="alert alert-danger">هذا النوع من الملفات غ
 else { echo '<label class="alert alert-danger">أختر الملف أولا!</label> <br> '; 
 } 
 } 
+      if(isset($_SESSION["customersProjectBuildingDataForSession"])){
+          unset($_SESSION["customersProjectBuildingDataForSession"]);
+      }
 ?>
 
   <form enctype="multipart/form-data" method="POST" role="form"> 

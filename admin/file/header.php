@@ -62,7 +62,7 @@ session_start();
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.min.css">
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
-
+<link rel="stylesheet" type="text/css" href="dist/css/project_build.css">
 
 
 <!-- Google Font -->

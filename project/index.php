@@ -1,18 +1,23 @@
 <?php
-     error_reporting(0);
+die();
+//     error_reporting(0);
   include('connect.php');
-  
+
   if( isset($_GET['c']) || $_GET['c'] ){
 	$TOKEN = $_GET['c'];
-} 
-			 $count =0;
-			$sql="select * from customers WHERE token = '$TOKEN' ";
-      $result=$conn->query($sql);
-       $count = $result->num_rows;
+    $projectNumber = $_GET['p'];
+    $buildingNumber = $_GET['b'];
+}
+
+$count =0;
+$sql="select * from project_building WHERE project_number = '$projectNumber' 
+                  AND building_number ='$buildingNumber' ";
+$result=$conn->query($sql);
+$count = $result->num_rows;
 			while($row = $result->fetch_assoc()) {
 				$count = $count+1;
 			$cid=$row['id'];
-			$name = $row['name'];
+			//$name = $row['name'];
 			$step1 = $row['step1'];
 			$step2 = $row['step2'];
 			$step3 = $row['step3'];
@@ -20,12 +25,13 @@
 			$step5 = $row['step5'];
 			$step6 = $row['step6'];
 			$step7 = $row['step7'];
-      $projectdate = $row['projectdate'];
-      $project =($row['project']);
-      $bulding=($row['bulding']);
-      $stock=($row['stock']);
-      $flat=($row['flat']);
-      $floor=($row['floor']);
+      $projectdate = $row['project_date'];
+      $deliveryDate = $row['project_delivery_date'];
+      $project =($row['project_number']);
+      $bulding=($row['building_number']);
+//      $stock=($row['stock']);
+//      $flat=($row['flat']);
+//      $floor=($row['floor']);
       }
     ?>
   <?php include('inc/header.php'); ?>
@@ -59,9 +65,9 @@
 		</div>
 							</div>
 		</section>
-                
+
 				</div>
-             
+
 				<section class="elementor-section elementor-inner-section elementor-element elementor-element-6d07e02 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6d07e02" data-element_type="section">
 						<div class="elementor-container elementor-column-gap-default">
 					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-0117eea" data-id="0117eea" data-element_type="column">
@@ -78,7 +84,7 @@
 				<div class="elementor-widget-container">
 			<style>/*! elementor - v3.7.4 - 31-08-2022 */
 .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#818a91;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{color:#818a91;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor .elementor-drop-cap{float:right;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}</style>
-  
+
    <?php
         $sql="select * from setting  ";
       $result=$conn->query($sql);
@@ -93,7 +99,7 @@
        <?php
       }
       ?>
-      
+
 				</div>
 				<div class="elementor-element elementor-element-4b35050 elementor-widget elementor-widget-heading" data-id="4b35050" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -132,20 +138,20 @@
 				<div class="elementor-widget-container">
 			<div class="ekit-wid-con" >        <div class="ekit-single-piechart withcontent">
 
-            
+
             <div class="colorful-chart piechart" data-color="#35ed7e" data-size="150" data-linewidth="20" data-percent="<?PHP echo $step1; ?>">
 
-                
+
                     <span class="ekit-chart-content"><?PHP echo $step1; ?>&#37;</span>
 
-                
-                
-                
+
+
+
 
 
             </div>
                          <h2 class="ekit-piechart-title">إصدار رخصة البناء</h2>
-            
+
             <p> <?php echo $projectdate; ?></p>
 
                     </div>
@@ -159,21 +165,21 @@
 				<div class="elementor-widget-container">
 			<div class="ekit-wid-con" >        <div class="ekit-single-piechart withcontent">
 
-            
+
             <div class="colorful-chart piechart" data-color="#f96933" data-size="150" data-linewidth="20" data-percent="<?PHP echo $step2; ?>">
 
-                
+
                     <span class="ekit-chart-content"><?PHP echo $step2; ?>&#37;</span>
 
-                
-                
-                
+
+
+
 
 
             </div>
                          <h2 class="ekit-piechart-title">الأعمال الإنشائية</h2>
-            
-            <p> <?php echo $projectdate; ?></p>
+
+
 
                     </div>
     </div>		</div>
@@ -186,21 +192,21 @@
 				<div class="elementor-widget-container">
 			<div class="ekit-wid-con" >        <div class="ekit-single-piechart withcontent">
 
-            
+
             <div class="colorful-chart piechart" data-size="150" data-linewidth="20" data-percent="<?PHP echo $step3; ?>">
 
-                
+
                     <span class="ekit-chart-content"><?PHP echo $step3; ?>&#37;</span>
 
-                
-                
-                
+
+
+
 
 
             </div>
                          <h2 class="ekit-piechart-title">التشطيبات الداخلية</h2>
-            
-            <p> <?php echo $projectdate; ?></p>
+
+
 
                     </div>
     </div>		</div>
@@ -213,21 +219,21 @@
 				<div class="elementor-widget-container">
 			<div class="ekit-wid-con" >        <div class="ekit-single-piechart withcontent">
 
-            
+
             <div class="colorful-chart piechart" data-color="#9460ff" data-size="150" data-linewidth="20" data-percent="<?PHP echo $step4; ?>">
 
-                
+
                     <span class="ekit-chart-content"><?PHP echo $step4; ?>&#37;</span>
 
-                
-                
-                
+
+
+
 
 
             </div>
                          <h2 class="ekit-piechart-title">التشطيبات الخارجية</h2>
-            
-            <p> <?php echo $projectdate; ?></p>
+
+
 
                     </div>
     </div>		</div>
@@ -244,21 +250,21 @@
 				<div class="elementor-widget-container">
 			<div class="ekit-wid-con" >        <div class="ekit-single-piechart withcontent">
 
-            
+
             <div class="colorful-chart piechart" data-color="#35ed7e" data-size="150" data-linewidth="20" data-percent="<?PHP echo $step5; ?>">
 
-                
+
                     <span class="ekit-chart-content"><?PHP echo $step5; ?>&#37;</span>
 
-                
-                
-                
+
+
+
 
 
             </div>
                          <h2 class="ekit-piechart-title">استلام اتحاد الملاك</h2>
-            
-            <p> <?php echo $projectdate; ?></p>
+
+
 
                     </div>
     </div>		</div>
@@ -271,21 +277,21 @@
 				<div class="elementor-widget-container">
 			<div class="ekit-wid-con" >        <div class="ekit-single-piechart withcontent">
 
-            
+
             <div class="colorful-chart piechart" data-color="#f96933" data-size="150" data-linewidth="20" data-percent="<?PHP echo $step6; ?>">
 
-                
+
                     <span class="ekit-chart-content"><?PHP echo $step6; ?>&#37;</span>
 
-                
-                
-                
+
+
+
 
 
             </div>
                          <h2 class="ekit-piechart-title">فرز الصكوك</h2>
-            
-            <p> <?php echo $projectdate; ?></p>
+
+
 
                     </div>
     </div>		</div>
@@ -298,21 +304,21 @@
 				<div class="elementor-widget-container">
 			<div class="ekit-wid-con" >        <div class="ekit-single-piechart withcontent">
 
-            
+
             <div class="colorful-chart piechart" data-color="#9460ff" data-size="150" data-linewidth="20" data-percent="<?PHP echo $step7; ?>">
 
-                
+
                     <span class="ekit-chart-content"><?PHP echo $step7; ?>&#37;</span>
 
-                
-                
-                
+
+
+
 
 
             </div>
                          <h2 class="ekit-piechart-title">شهادة الأشغال</h2>
-            
-            <p> <?php echo $projectdate; ?></p>
+
+
 
                     </div>
     </div>		</div>
@@ -334,19 +340,19 @@
 			<div class="ekit-wid-con" >
             <div class="elementskit-info-image-box ekit-image-box text-center simple-card" >
 
-                
+
                 <div class="elementskit-box-header image-box-img-center">
 
                     <img width="1280" height="799" src="https://project.floteksa.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-04-at-10.12.12-AM-1.jpeg" class="attachment-full size-full" alt="" loading="lazy" srcset="https://project.floteksa.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-04-at-10.12.12-AM-1.jpeg 1280w, https://project.floteksa.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-04-at-10.12.12-AM-1-300x187.jpeg 300w, https://project.floteksa.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-04-at-10.12.12-AM-1-1024x639.jpeg 1024w, https://project.floteksa.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-04-at-10.12.12-AM-1-768x479.jpeg 768w" sizes="(max-width: 1280px) 100vw, 1280px" />
                 </div>
-                
+
                 <div class="elementskit-box-body ekit-image-box-body">
                     <div class="elementskit-box-content ekit-image-box-body-inner">
                                                 <h3 class="elementskit-info-box-title">
 
-                        
+
                         <a>صور الإنشاءات </a>
-                        
+
                     </h3>
                                                         </div>
 
@@ -354,8 +360,8 @@
                     <div class="box-footer">
                         <div class="btn-wraper">
                    <a target="_blank" href="album.php?c=<?php echo $TOKEN ?>&B=1" class="elementskit-btn whitespace--normal">
-                                    
-                                    
+
+
                                     عرض الألبوم                                </a>
                                                         </div>
                     </div>
@@ -373,19 +379,19 @@
 			<div class="ekit-wid-con" >
             <div class="elementskit-info-image-box ekit-image-box text-center simple-card" >
 
-                
+
                 <div class="elementskit-box-header image-box-img-center">
 
                     <img width="1280" height="799" src="https://project.floteksa.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-04-at-10.12.12-AM.jpeg" class="attachment-full size-full" alt="" loading="lazy" srcset="https://project.floteksa.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-04-at-10.12.12-AM.jpeg 1280w, https://project.floteksa.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-04-at-10.12.12-AM-300x187.jpeg 300w, https://project.floteksa.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-04-at-10.12.12-AM-1024x639.jpeg 1024w, https://project.floteksa.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-04-at-10.12.12-AM-768x479.jpeg 768w" sizes="(max-width: 1280px) 100vw, 1280px" />
                 </div>
-                
+
                 <div class="elementskit-box-body ekit-image-box-body">
                     <div class="elementskit-box-content ekit-image-box-body-inner">
                                                 <h3 class="elementskit-info-box-title">
 
-                        
+
                         <a>التشطيبات الداخلية </a>
-                        
+
                     </h3>
                                                         </div>
 
@@ -393,8 +399,8 @@
                     <div class="box-footer">
                         <div class="btn-wraper">
                      <a target="_blank" href="album.php?c=<?php echo $TOKEN ?>&B=2" class="elementskit-btn whitespace--normal">
-                                    
-                                    
+
+
                                     عرض الألبوم                                </a>
                                                         </div>
                     </div>
@@ -412,19 +418,19 @@
 			<div class="ekit-wid-con" >
             <div class="elementskit-info-image-box ekit-image-box text-center simple-card" >
 
-                
+
                 <div class="elementskit-box-header image-box-img-center">
 
                     <img width="1280" height="800" src="https://project.floteksa.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-10-at-10.22.31-AM.jpeg" class="attachment-full size-full" alt="" loading="lazy" srcset="https://project.floteksa.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-10-at-10.22.31-AM.jpeg 1280w, https://project.floteksa.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-10-at-10.22.31-AM-300x188.jpeg 300w, https://project.floteksa.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-10-at-10.22.31-AM-1024x640.jpeg 1024w, https://project.floteksa.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-10-at-10.22.31-AM-768x480.jpeg 768w" sizes="(max-width: 1280px) 100vw, 1280px" />
                 </div>
-                
+
                 <div class="elementskit-box-body ekit-image-box-body">
                     <div class="elementskit-box-content ekit-image-box-body-inner">
                                                 <h3 class="elementskit-info-box-title">
 
-                        
+
                         <a>التشطيبات الخارجية </a>
-                        
+
                     </h3>
                                                         </div>
 
@@ -432,8 +438,8 @@
                     <div class="box-footer">
                         <div class="btn-wraper">
                  <a target="_blank" href="album.php?c=<?php echo $TOKEN ?>&B=3" class="elementskit-btn whitespace--normal">
-                                    
-                                    
+
+
                                     عرض الألبوم                                </a>
                                                         </div>
                     </div>
@@ -446,7 +452,7 @@
 		</div>
 							</div>
 		</section>
-		
+
 				<section class="elementor-section elementor-top-section elementor-element elementor-element-7269e31 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7269e31" data-element_type="section">
 						<div class="elementor-container elementor-column-gap-default">
 					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ae3408e" data-id="ae3408e" data-element_type="column">
@@ -460,4 +466,3 @@
 			</div> <!-- ast-container -->
 	</div><!-- #content -->
   <?php include('inc/footer.php'); ?>
-  

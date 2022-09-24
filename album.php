@@ -1,11 +1,11 @@
 <?php
      error_reporting(0);
   include('connect.php');
-  
+
   if( isset($_GET['c']) || $_GET['c'] ){
 	$TOKEN = $_GET['c'];
     $ALBUM = $_GET['B'];
-} 
+}
 
     ?>
 <!DOCTYPE html>
@@ -21,7 +21,7 @@
                 }elseif ($ALBUM == '2'){
                     echo 'التشطيبات الداخلية';
                 }else{
-                    echo 'التشطيبات الخارجية'; 
+                    echo 'التشطيبات الخارجية';
                 }
     ; ?> - project floteksa</title>
 
@@ -103,7 +103,7 @@ flexibility(document.documentElement);
 <script src='https://project.floteksa.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
 <script src='https://polyfill.io/v3/polyfill.min.js?version=3.109.0&#038;features=Array.prototype.find%2CCustomEvent%2CElement.prototype.closest%2CElement.prototype.dataset%2CEvent%2CMutationObserver%2CNodeList.prototype.forEach%2CObject.assign%2CObject.keys%2CString.prototype.endsWith%2CURL%2CURLSearchParams%2CXMLHttpRequest&#038;flags=gated&#038;ver=6.0.2' id='site-reviews/polyfill-js'></script>
 <link rel="https://api.w.org/" href="https://project.floteksa.com/wp-json/" /><link rel="alternate" type="application/json" href="https://project.floteksa.com/wp-json/wp/v2/pages/221" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://project.floteksa.com/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://project.floteksa.com/wp-includes/wlwmanifest.xml" /> 
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://project.floteksa.com/wp-includes/wlwmanifest.xml" />
 <meta name="generator" content="WordPress 6.0.2" />
 <link rel='shortlink' href='https://project.floteksa.com/?p=221' />
 <link rel="alternate" type="application/json+oembed" href="https://project.floteksa.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject.floteksa.com%2F%25d8%25a3%25d9%2584%25d8%25a8%25d9%2588%25d9%2585-%25d8%25a7%25d9%2584%25d8%25a7%25d9%2586%25d8%25b4%25d8%25a7%25d8%25a1%25d8%25a7%25d8%25aa%2F" />
@@ -175,14 +175,21 @@ class="hfeed site" id="page">
 			<style>/*! elementor - v3.7.4 - 31-08-2022 */
 .elementor-image-gallery .gallery-item{display:inline-block;text-align:center;vertical-align:top;width:100%;max-width:100%;margin:0 auto}.elementor-image-gallery .gallery-item img{margin:0 auto}.elementor-image-gallery .gallery-item .gallery-caption{margin:0}.elementor-image-gallery figure img{display:block}.elementor-image-gallery figure figcaption{width:100%}.gallery-spacing-custom .elementor-image-gallery .gallery-icon{padding:0}@media (min-width:768px){.elementor-image-gallery .gallery-columns-2 .gallery-item{max-width:50%}.elementor-image-gallery .gallery-columns-3 .gallery-item{max-width:33.33%}.elementor-image-gallery .gallery-columns-4 .gallery-item{max-width:25%}.elementor-image-gallery .gallery-columns-5 .gallery-item{max-width:20%}.elementor-image-gallery .gallery-columns-6 .gallery-item{max-width:16.666%}.elementor-image-gallery .gallery-columns-7 .gallery-item{max-width:14.28%}.elementor-image-gallery .gallery-columns-8 .gallery-item{max-width:12.5%}.elementor-image-gallery .gallery-columns-9 .gallery-item{max-width:11.11%}.elementor-image-gallery .gallery-columns-10 .gallery-item{max-width:10%}}@media (min-width:480px) and (max-width:767px){.elementor-image-gallery .gallery.gallery-columns-2 .gallery-item,.elementor-image-gallery .gallery.gallery-columns-3 .gallery-item,.elementor-image-gallery .gallery.gallery-columns-4 .gallery-item,.elementor-image-gallery .gallery.gallery-columns-5 .gallery-item,.elementor-image-gallery .gallery.gallery-columns-6 .gallery-item,.elementor-image-gallery .gallery.gallery-columns-7 .gallery-item,.elementor-image-gallery .gallery.gallery-columns-8 .gallery-item,.elementor-image-gallery .gallery.gallery-columns-9 .gallery-item,.elementor-image-gallery .gallery.gallery-columns-10 .gallery-item{max-width:50%}}@media (max-width:479px){.elementor-image-gallery .gallery.gallery-columns-2 .gallery-item,.elementor-image-gallery .gallery.gallery-columns-3 .gallery-item,.elementor-image-gallery .gallery.gallery-columns-4 .gallery-item,.elementor-image-gallery .gallery.gallery-columns-5 .gallery-item,.elementor-image-gallery .gallery.gallery-columns-6 .gallery-item,.elementor-image-gallery .gallery.gallery-columns-7 .gallery-item,.elementor-image-gallery .gallery.gallery-columns-8 .gallery-item,.elementor-image-gallery .gallery.gallery-columns-9 .gallery-item,.elementor-image-gallery .gallery.gallery-columns-10 .gallery-item{max-width:100%}}</style>		<div class="elementor-image-gallery">
 			<div id='gallery-1' class='gallery galleryid-221 gallery-columns-3 gallery-size-full'>
-                
+
                 <?php
-                	$sql="select * from customers WHERE token = '$TOKEN' ";
+                $projectNumber = $_GET["p"];
+                $buildingNumber = $_GET["b"];
+                $image_type = $_GET["B"];
+                	$sql="select * from project_building WHERE project_number = '$projectNumber' And 
+                             building_number= '$buildingNumber'        ";
                   $result=$conn->query($sql);
                   while($row = $result->fetch_assoc()) {
                   $cid=$row['id'];
 
-                  $sql_image="select * from imgs where cid = '$cid' AND imgetype = '$ALBUM' ";
+                  $sql_image="SELECT * FROM imgs AS a WHERE `upload_date` = ( 
+                              SELECT MAX(`upload_date`) FROM imgs AS b 
+                              WHERE a.`imgetype` = ".$image_type." AND a.`project_building_id` = ".$cid." );";
+
                   $result_imge=$conn->query($sql_image);
                   $count = $result_imge->num_rows;
                 if ($count == '0'){
@@ -190,27 +197,27 @@ class="hfeed site" id="page">
                 }else{
                  while($row_imge = $result_imge->fetch_assoc()) {
                 $img = $row_imge['img'];
-               
+
              ?>
-                
+
                 <figure class='gallery-item'>
 			<div class='gallery-icon portrait'>
 				<a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="8b731d8" data-elementor-lightbox-title="45-M1"
-                   e-action-hash="#" href='img/<?php echo $img; ?>'>
-                    <img width="597" height="1280" src="img/<?php echo $img; ?>" class="attachment-full size-full" alt="" loading="lazy" srcset="img/<?php echo $img; ?> 597w, img/<?php echo $img; ?> 140w, img/<?php echo $img; ?> 478w" sizes="(max-width: 597px) 100vw, 597px" /></a>
+                   e-action-hash="#" href='Upload/<?php echo $img; ?>'>
+                    <img width="597" height="1280" src="Upload/<?php echo $img; ?>" class="attachment-full size-full" alt="" loading="lazy" srcset="Upload/<?php echo $img; ?> 597w, Upload/<?php echo $img; ?> 140w, Upload/<?php echo $img; ?> 478w" sizes="(max-width: 597px) 100vw, 597px" /></a>
 			</div></figure>
             <?php
-            
-              
-            
-              
+
+
+
+
               }}}
               if( !isset($_GET['c']) ){
 	           echo '<p >خطأ ! لاتوجد بيانات</p>';
               }
               ?>
-          
-       
+
+
 		</div>
 		</div>
 				</div>
@@ -262,7 +269,7 @@ var astra = {"break_point":"921","isRtl":"1"};
 			resturl: 'https://project.floteksa.com/wp-json/elementskit/v1/',
 		}
 
-		
+
 </script>
 <script src='https://project.floteksa.com/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts.js?ver=2.7.0' id='ekit-widget-scripts-js'></script>
 <script id='site-reviews-js-before'>

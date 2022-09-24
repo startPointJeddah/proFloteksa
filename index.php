@@ -3,15 +3,27 @@ error_reporting(0);
 include('connect.php');
 if( isset($_GET['c']) || $_GET['c'] ){
     $TOKEN = $_GET['c'];
+    $projectNumber = $_GET['p'];
+    $buildingNumber = $_GET['b'];
 }
+
+$query = "select stock , flat, floor from customers where token = '$TOKEN'";
+$resultQuery=$conn->query($query);
+while($row = $resultQuery->fetch_assoc()) {
+    $stock=($row['stock']);
+      $flat=($row['flat']);
+      $floor=($row['floor']);
+}
+
 $count =0;
-$sql="select * from customers WHERE token = '$TOKEN' ";
+$sql="select * from project_building WHERE project_number = '$projectNumber' 
+                  AND building_number ='$buildingNumber' ";
 $result=$conn->query($sql);
 $count = $result->num_rows;
 while($row = $result->fetch_assoc()) {
     $count = $count+1;
     $cid=$row['id'];
-    $name = $row['name'];
+    //$name = $row['name'];
     $step1 = $row['step1'];
     $step2 = $row['step2'];
     $step3 = $row['step3'];
@@ -19,13 +31,11 @@ while($row = $result->fetch_assoc()) {
     $step5 = $row['step5'];
     $step6 = $row['step6'];
     $step7 = $row['step7'];
-    $projectdate = $row['projectdate'];
-    $deliveryDate = $row['deliveryDate'];
-    $project =($row['project']);
-    $bulding=($row['bulding']);
-    $stock=($row['stock']);
-    $flat=($row['flat']);
-    $floor=($row['floor']);
+    $projectdate = $row['project_date'];
+    $deliveryDate = $row['project_delivery_date'];
+    $project =($row['project_number']);
+    $bulding=($row['building_number']);
+
 }
 
 $comments = [];
@@ -375,7 +385,7 @@ $comments = [];
                                                     <div class="elementskit-box-footer">
                                                         <div class="box-footer">
                                                             <div class="btn-wraper">
-                                                                <a target="_blank" href="album.php?c=<?php echo $TOKEN ?>&B=1" class="elementskit-btn whitespace--normal">
+                                                                <a target="_blank" href="album.php?p=<?php echo $projectNumber ?>&b=<?php echo $buildingNumber ?>&B=1" class="elementskit-btn whitespace--normal">
 
 
                                                                     عرض الألبوم                                </a>
@@ -414,7 +424,7 @@ $comments = [];
                                                     <div class="elementskit-box-footer">
                                                         <div class="box-footer">
                                                             <div class="btn-wraper">
-                                                                <a target="_blank" href="album.php?c=<?php echo $TOKEN ?>&B=2" class="elementskit-btn whitespace--normal">
+                                                                <a target="_blank" href="album.php?p=<?php echo $projectNumber ?>&b=<?php echo $buildingNumber ?>&B=2" class="elementskit-btn whitespace--normal">
 
 
                                                                     عرض الألبوم                                </a>
@@ -453,7 +463,7 @@ $comments = [];
                                                     <div class="elementskit-box-footer">
                                                         <div class="box-footer">
                                                             <div class="btn-wraper">
-                                                                <a target="_blank" href="album.php?c=<?php echo $TOKEN ?>&B=3" class="elementskit-btn whitespace--normal">
+                                                                <a target="_blank" href="album.php?p=<?php echo $projectNumber ?>&b=<?php echo $buildingNumber ?>&B=3" class="elementskit-btn whitespace--normal">
 
 
                                                                     عرض الألبوم                                </a>

@@ -10,18 +10,18 @@
 $sql_u="select * from users where username ='$wname' ";
       $result_u=$conn->query($sql_u);
 			while($row_u = $result_u->fetch_assoc()) {
-  
+
         $userview_2_=$row_u['userview2'];
       }
 if(  $userview_2_ != 'on' ){
 	header("Location:home.php");
-} 
+}
 ?>
 
 <?php include ('file/header.php');?>
-    <title>مستخدمى لوحة التحكم</title>        
+    <title>مستخدمى لوحة التحكم</title>
  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper"> 
+  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1> مستخدمى لوحة التحكم
@@ -29,17 +29,17 @@ if(  $userview_2_ != 'on' ){
 	  <ol class="breadcrumb" >
         <li><a href="home.php"><i class="fa fa-dashboard"></i> الرئيسية </a></li>
         <li class="active">مستخدمى لوحة التحكم</li>
-      </ol>	
+      </ol>
     </section>
-    
+
     <!-- Main content -->
-    <section class="content"> 
+    <section class="content">
       <!-- Main row -->
-      <div class="row"> 
-        
+      <div class="row">
+
         <!-- Section General -->
         <section class="col-lg-12 connectedSortable">
-		
+
 
 
 		<div class="box box-primary">
@@ -57,7 +57,7 @@ if(  $userview_2_ != 'on' ){
            <button type="button" class="close" data-dismiss="alert">x</button>
             <strong>نجاح العملية !</strong> تم التعديل بنجاح
         </div>
-         
+
     <div class="alert alert-danger" id="error" style="margin-top: 10px; display: none">
       <button type="button" class="close" data-dismiss="alert">x</button>
             <strong>خطأ !</strong> كلمتي المرور غير متطابقتين
@@ -93,7 +93,8 @@ if(  $userview_2_ != 'on' ){
                 <tr>
 					<th class="">#</th>
      <th>الاسم الكامل</th>
-     	<th>اسم الدخول</th>				
+     	<th>اسم الدخول</th>
+        <th>رقم واتساب</th>
 					<th>تعديل</th>
 					<th>حذف</th>
                 </tr>
@@ -108,21 +109,27 @@ if(  $userview_2_ != 'on' ){
 			?>
             <tr>
 					<th class=""><?php echo $count ?></th>
-    
+
                     <td>
                     <?php echo $row['name']; ?>
                     </td>
           <td>
            <?php echo $row['username']; ?>
          </td>
+                <td>
+<!--                    <input class="whatsappUserNumber" style="float: right" type="radio" aria-label="Checkbox for following text input" name="whatsappCheck" id="">-->
 
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=00966<?php echo $row['whatsapp']; ?>" >
+                    <?php echo $row['whatsapp']; ?>
+                    </a>
+                </td>
 				<td class="text-center">
      <?php if ($useredit2_u == 'on' ) :?>
 						<a title="تعديل"  href='#' class="btn btn-info" data-toggle="modal" data-target="#edit<?php echo $row["id"]; ?>">
 						<i class="fa fa-edit"></i></span> تعديل</a>
        <?php endif ?>
 					</td>
-                   
+
 					<td class="text-center">
        <?php if ($row['type'] == '1' ) :?>
         <?php if ($userdelete2_u == 'on' ) :?>
@@ -133,7 +140,7 @@ if(  $userview_2_ != 'on' ){
       <br>
                     </td>
             </tr>
-						
+
 		<!-- اضافة -->
         <div class="modal fade" id="edit<?php echo $row["id"]; ?>"  role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -150,9 +157,9 @@ if(  $userview_2_ != 'on' ){
 
                         <div class="modal-body">
                             <p>تعديل ؟</p>
-                            
+
                             <br>
-                             
+
                             <div class="col-md-12">
                                 <div class="form-group">
                              <label>* الاسم الكامل</label>
@@ -169,6 +176,11 @@ if(  $userview_2_ != 'on' ){
                                <label>إسم الدخول</label>
                                <input type="text" name="username" value="<?php echo $row["username"]; ?>"   class="form-control" required>
                                </div></div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>رقم الواتساب</label>
+                                    <input type="text" name="whatsapp" value="<?php echo $row["whatsapp"]; ?>"   class="form-control" required>
+                                </div></div>
                                <!-- /.form-group -->
                                <div class="col-md-6">
                                <div class="form-group">
@@ -181,7 +193,7 @@ if(  $userview_2_ != 'on' ){
                                <input type="text" name="pwd"  value='' class="form-control" required>
                                </div></div>
                                <!-- /.form-group -->
-                               
+
                                   <div class="col-md-12">
                                 <div class="form-group">
                                <label>الصلاحيات</label>
@@ -228,10 +240,10 @@ if(  $userview_2_ != 'on' ){
                                 <label>حذف</label>
                                <input type="checkbox" name="userdelete3" <?php echo ($row["userdelete3"] =='on' ? 'checked' : '');?> >
                                </div>
-                                  
+
                                   </div>
                                <!-- /.form-group -->
-                              
+
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">تراجع</button>
@@ -242,8 +254,8 @@ if(  $userview_2_ != 'on' ){
             </div>
         </div>
         </div>
-			
-   
+
+
 				<!--حذف-->
 				<div class="modal fade" id="confirm-delete<?php echo $row["id"]; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -254,7 +266,7 @@ if(  $userview_2_ != 'on' ){
 					<form action="" method="post">
 				 <input type="hidden" name="id" id="id" value="<?php echo $row["id"]; ?>">
       </div>
-		
+
       <div class="modal-body">
         <p>أنت على وشك حذف بيانات, هذا الإجراء لا رجعة فيه. هل تريد تفعيله؟</p>
         <p class="debug-url"></p>
@@ -269,7 +281,7 @@ if(  $userview_2_ != 'on' ){
     </div>
 		 </form>
   </div>
-</div>  
+</div>
            <?php } ?>
 		</tbody>
 			</table>
@@ -286,12 +298,12 @@ if(  $userview_2_ != 'on' ){
                         </button>
                     </div>
                     <form action="" method="post" >
-                       
+
                         <div class="modal-body">
                             <p>اضافة  جديد ؟</p>
-                            
+
                             <br>
-                           
+
                             <div class="col-md-12">
                                 <div class="form-group">
                              <label>* الاسم الكامل</label>
@@ -302,13 +314,18 @@ if(  $userview_2_ != 'on' ){
                              <label>* البريد الالكتروني</label>
                                <input type="email" class="form-control" name="mail"  value="" required>
                                 </div></div>
-                               
+
                                 <!-- /.form-group -->
                                 <div class="col-md-12">
                                <div class="form-group">
                                <label>إسم الدخول</label>
                                <input type="text" name="username"   class="form-control" required>
                                </div></div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>رقم الواتساب</label>
+                                    <input placeholder="من فضلك ادخل رقم الواتساب من دون صفر في البدايه" type="text" name="whatsapp"    class="form-control" required>
+                                </div></div>
                                <!-- /.form-group -->
                                <div class="col-md-6">
                                <div class="form-group">
@@ -367,11 +384,11 @@ if(  $userview_2_ != 'on' ){
                                 <label>حذف</label>
                                <input type="checkbox" name="userdelete3"  >
                                </div>
-                                  
+
                                   </div>
                                <!-- /.form-group -->
-                              
-                                
+
+
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">تراجع</button>
@@ -382,10 +399,10 @@ if(  $userview_2_ != 'on' ){
             </div>
         </div>
         </div>
-        
+
 		</div>
 		</div>
-		
+
 	<?php
 if(isset($_POST["add"]))
 {
@@ -393,6 +410,7 @@ $username=htmlspecialchars($_POST['username']);
 $name=htmlspecialchars($_POST['name']);
 $password=htmlspecialchars($_POST['pw']);
 $mail=htmlspecialchars($_POST['mail']);
+$whatsAppNumber = htmlspecialchars($_POST['whatsapp']);
 
 $userview=htmlspecialchars($_POST['userview']);
 $useradd=htmlspecialchars($_POST['useradd']);
@@ -431,8 +449,8 @@ if ($count1>0){
     </script>
     <?php
    }else{
-$sql="insert into users (username,name,password,mail,useradd,useredit,userdelete,useradd2,useredit2,userdelete2,useradd3,useredit3,userdelete3,userview,userview2,userview3) values
-('$username','$name','$password','$mail','$useradd','$useredit','$userdelete','$useradd2','$useredit2','$userdelete2','$useradd3','$useredit3','$userdelete3','$userview','$userview2','$userview3')";
+$sql="insert into users (username,name,password,mail,whatsapp,useradd,useredit,userdelete,useradd2,useredit2,userdelete2,useradd3,useredit3,userdelete3,userview,userview2,userview3) values
+('$username','$name','$password','$mail','$whatsAppNumber','$useradd','$useredit','$userdelete','$useradd2','$useredit2','$userdelete2','$useradd3','$useredit3','$userdelete3','$userview','$userview2','$userview3')";
 $result=$conn->query($sql);
 if ($result == true){
  ?>
@@ -456,6 +474,7 @@ $name=htmlspecialchars($_POST['name']);
 $password=htmlspecialchars($_POST['pw']);
 $ids=htmlspecialchars($_POST['id']);
 $mail=htmlspecialchars($_POST['mail']);
+$whatsAppNumber = htmlspecialchars($_POST['whatsapp']);
 $userview=htmlspecialchars($_POST['userview']);
 $useradd=htmlspecialchars($_POST['useradd']);
 $useredit=htmlspecialchars($_POST['useredit']);
@@ -499,6 +518,7 @@ username='$username',
 name = '$name',
 password='$password',
 mail = '$mail',
+whatsapp = '$whatsAppNumber',
 useradd='$useradd',
 useredit='$useredit',
 userdelete='$userdelete',
@@ -527,16 +547,16 @@ if ($result == true){
 }}}
 ?>
 
-		
+
 
 <?php
 error_reporting(0);
 if(isset($_POST["delete"]))
 {
-  
+
   $sql="delete  from users  where id ='$_POST[id]'";
 $result=$conn->query($sql);
- if ($result == true){    
+ if ($result == true){
 ?>
    <script type="text/javascript">
       document.getElementById("successcancel").style.display="block";
@@ -547,8 +567,8 @@ $result=$conn->query($sql);
     <?php
  }}
 ?>
-		
-		
+
+
 	</body>
 </html>
 

@@ -25,7 +25,9 @@
 <?php
   }
   ?>
-    <li ><a href="logout.php"> <i class="fa fa-lock"></i> <span>خروج</span> <span class="pull-right-container"> </span> </a> </li>  
+          <li ><a href="groups.php"> <i class="fa fa-lock"></i> <span>المجموعات</span> <span class="pull-right-container"> </span> </a> </li>
+
+          <li ><a href="logout.php"> <i class="fa fa-lock"></i> <span>خروج</span> <span class="pull-right-container"> </span> </a> </li>
 
           
       </ul>
