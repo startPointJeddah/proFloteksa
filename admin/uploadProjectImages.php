@@ -34,12 +34,12 @@ if(isset($_GET['project']) && isset($_GET['bulding']) ){
             $excelData .= "<td>".$row["phone"]."</td>";
             $excelData .= "<td>".$link."</td>";
             $excelData .= "</tr>";
-         }
+        }
     }else{
         $excelData .= 'No records found...';
     }
 
-$excelData .= "</table>
+    $excelData .= "</table>
 </html>";
     ob_clean();
     header("Content-Type: application/vnd.ms-excel; charset=utf-8-sig");
@@ -74,7 +74,7 @@ $excelData .= "</table>
 
         if(isset($_FILES['files']['name'][$index]) && $_FILES['files']['name'][$index] != ''){
             // File name
-            $filename = $_FILES['files']['name'][$index];
+            $filename = $project_building_id.$_FILES['files']['name'][$index];
 
             // Get extension
             $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
@@ -86,7 +86,7 @@ $excelData .= "</table>
             if(in_array($ext, $valid_ext)){
                 $insertImagesFlag = true;
                 $insertImages .=
-                    "(".$project_building_id." ,". $type[$index] ." ,'".$_FILES['files']['name'][$index]."' ,'".
+                    "(".$project_building_id." ,". $type[$index] ." ,'".$filename."' ,'".
                     $randomToken."' ,'".
                     $uploadDate."'),";
 
@@ -102,6 +102,7 @@ $excelData .= "</table>
             }
         }
     }
+
 
     if($insertImagesFlag){
         $conn->query(substr($insertImages , 0 , -1));
