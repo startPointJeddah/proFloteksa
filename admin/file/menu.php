@@ -24,8 +24,12 @@
    <li class="<?php if(basename($_SERVER['PHP_SELF'])=='settings.php'){echo 'active';}else{ echo '';}?>"> <a href="settings.php"> <i class="fa fa-sticky-note-o"></i> <span>الاعدادت</span> <span class="pull-right-container"> </span> </a> </li>  
 <?php
   }
+  if(  $userview4_u == 'on' ){
+      ?>
+      <li class="<?php if(basename($_SERVER['PHP_SELF'])=='settings.php'){echo 'active';}else{ echo '';}?>"><a href="groups.php"> <i class="fa fa-group"></i> <span>المجموعات</span> <span class="pull-right-container"> </span> </a> </li>
+          <?php
+  }
   ?>
-          <li ><a href="groups.php"> <i class="fa fa-lock"></i> <span>المجموعات</span> <span class="pull-right-container"> </span> </a> </li>
 
           <li ><a href="logout.php"> <i class="fa fa-lock"></i> <span>خروج</span> <span class="pull-right-container"> </span> </a> </li>
 

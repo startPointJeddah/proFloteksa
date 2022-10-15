@@ -61,6 +61,7 @@
 <script src="dist/js/project_build.js"></script>
 <!-- AdminScript for skins purposes -->
 <script src="dist/js/skins.js"></script>
+<script src="dist/js/whatsApp.js"></script>
 <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
@@ -105,42 +106,42 @@
   })
 </script>
 
-<script>
-// $(document).ready(function(){
-//
-//  function load_unseen_notification(view = '')
-//  {
-//   $.ajax({
-//    url:"fetch.php",
-//    method:"POST",
-//    data:{view:view},
-//    dataType:"json",
-//    success:function(data)
-//    {
-//     $('.dropdown-noty').html(data.notification);
-//     if(data.unseen_notification > 0)
-//     {
-//      $('.count').html(data.unseen_notification);
-//
-//     }
-//    }
-//   });
-//  }
-//
-//  load_unseen_notification();
-//
-//  $(document).on('click', '.toggle', function(){
-//   $('.count').html('');
-//   load_unseen_notification('yes');
-//  });
-//
-//  setInterval(function(){
-//   load_unseen_notification();
-//  }, 5000);
-//
-// });
-
-</script>
+<!--<script>-->
+<!--$(document).ready(function(){-->
+<!---->
+<!--//  function load_unseen_notification(view = '')-->
+<!--//  {-->
+<!--//   $.ajax({-->
+<!--//   url:"fetch.php",-->
+<!--//   method:"POST",-->
+<!--//   data:{view:view},-->
+<!--//   dataType:"json",-->
+<!--//   success:function(data)-->
+<!--//   {-->
+<!--//     $('.dropdown-noty').html(data.notification);-->
+<!--//     if(data.unseen_notification > 0)-->
+<!--//     {-->
+<!--//      $('.count').html(data.unseen_notification);-->
+<!---->
+<!--//     }-->
+<!--//   }-->
+<!--//   });-->
+<!--//  }-->
+<!---->
+<!--//  load_unseen_notification();-->
+<!---->
+<!--//  $(document).on('click', '.toggle', function(){-->
+<!--//   $('.count').html('');-->
+<!--//   load_unseen_notification('yes');-->
+<!--//  });-->
+<!---->
+<!--//  setInterval(function(){-->
+<!--//   load_unseen_notification();-->
+<!--//  }, 5000);-->
+<!---->
+<!--// });-->
+<!---->
+<!--</script>-->
 
 </body>
 

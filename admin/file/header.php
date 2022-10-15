@@ -22,6 +22,10 @@ session_start();
         $useredit3_u =  $row_u['useredit3'];
         $userdelete3_u=  $row_u['userdelete3'];
         $userview3_u=$row_u['userview3'];
+
+        $useredit4_u    =  $row_u['useredit4'];
+        $userdelete4_u  =  $row_u['userdelete4'];
+        $userview4_u    =  $row_u['userview4'];
       }
 
 ?>
