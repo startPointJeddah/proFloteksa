@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+error_reporting(E_ALL);
 session_start();
 ?>
 <!DOCTYPE html>
@@ -9,18 +9,18 @@ session_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
     <link rel="icon" type="image/png" href="dist/img/favicon.png" />
-	
+
 <link rel="stylesheet" href="dist/css/login.css">
-<!-- jQuery 3 --> 
-<script src="dist/js/jquery.min.js"></script> 
-<!-- AdminScript App --> 
-<script src="dist/js/AdminScript.min.js"></script> 
-<!-- AdminScript for skins purposes --> 
-<script src="dist/js/skins.js"></script> 
+<!-- jQuery 3 -->
+<script src="dist/js/jquery.min.js"></script>
+<!-- AdminScript App -->
+<script src="dist/js/AdminScript.min.js"></script>
+<!-- AdminScript for skins purposes -->
+<script src="dist/js/skins.js"></script>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo:300,400,600,700,300italic,400italic,600italic">
 <style>
-  
+
 .alert-danger {
     color: #a94442;
     background-color: #f2dede;
@@ -34,8 +34,8 @@ session_start();
 </style>
 </head>
 <body>
-	<div id="Authentication"> 
-  		
+	<div id="Authentication">
+
       <div class="Authleft">
 				<h1>درة العقارية  </h1>
 			<h2><img src="dist/img/cropped-new-logo.png.webp"/>  </h2>
@@ -58,13 +58,13 @@ session_start();
   					<input style="cursor: pointer" type="submit" value="تسجيل الدخول" name="submit">
   				</div>
   			</form>
-        
+
   		</div>
-  			
+
   </div>
 <?php
 if (isset($_POST['submit'])){
-  
+
 include('../connect.php');
 $wname=$_POST['login'];
 $pass=$_POST['pwd'];
@@ -73,7 +73,7 @@ $sql="select * from users where username ='$wname' and password='$password' ";
 $result=$conn->query($sql);
 $count = $result->num_rows;
 if ($count>0){
-  
+
     $_SESSION['logged']=$wname;
   header('location:home.php');
 
