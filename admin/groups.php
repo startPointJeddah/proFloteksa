@@ -54,15 +54,15 @@ $htmlCompnents = new html_groups_functions();
 
 
 
-                    if($_POST["building"] && $_POST["project"]){
-                        $project = $_POST["project"];
-                        $building = $_POST["building"];
-                        $htmlCompnents->getAllProjectBuildingDetails($project , $building);
-                        $htmlCompnents->tableHeader();
-                        $htmlCompnents->tableRowContent();
-                        $htmlCompnents->endOfTableEditDeleteButtons();
-                        $htmlCompnents->editButton();
-                        $htmlCompnents->deleteButton();
+                     if($_POST["building"] && $_POST["project"]){
+                         $project = $_POST["project"];
+                         $building = $_POST["building"];
+                         $htmlCompnents->getAllProjectBuildingDetails($project , $building);
+                         $htmlCompnents->tableHeader($useredit4_u , $userdelete4_u );
+                         $htmlCompnents->tableRowContent();
+                         $htmlCompnents->endOfTableEditDeleteButtons($useredit4_u , $userdelete4_u);
+                         $htmlCompnents->editButton();
+                         $htmlCompnents->deleteButton();
 
                         //$htmlCompnents->addModalButton();
                         echo '<div class="col-md-12">';
@@ -137,14 +137,22 @@ where id = $id
         if(isset($_POST["delete"]))
         {
 
-            $sql="select project_number , building_number  from project_building  where id ='$_POST[id]'";
-            $result=$conn->query($sql);
-            while($row = $result->fetch_assoc()){
-                $project_number = $row["project_number"];
-                $building_number = $row["building_number"];
-            }
-            $sql="delete  from customers  where project ='$project_number' AND bulding= '$building_number'";
-            $result=$conn->query($sql);
+        $sql="select project_number , building_number  from project_building  where id ='$_POST[id]'";
+        $result=$conn->query($sql);
+        while($row = $result->fetch_assoc()){
+            $project_number = $row["project_number"];
+            $building_number = $row["building_number"];
+        }
+        //Delete images of project form the server
+        $sql="select img  from imgs  where project_building_id ='$_POST[id]'";
+        $result=$conn->query($sql);
+        $uploadLocation = "../Upload";
+        while($row = $result->fetch_assoc()){
+            unlink($uploadLocation."/".$row["img"]);
+        }
+        //End of delete images of project form the server
+        $sql="delete  from customers  where project ='$project_number' AND bulding= '$building_number'";
+        $result=$conn->query($sql);
 
             $sql="delete  from imgs  where project_building_id ='$_POST[id]'";
             $result=$conn->query($sql);

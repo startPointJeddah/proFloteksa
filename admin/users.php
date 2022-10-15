@@ -117,7 +117,20 @@ if(  $userview_2_ != 'on' ){
            <?php echo $row['username']; ?>
          </td>
                 <td>
-                    <input class="whatsappUserNumber" style="float: right" type="radio" aria-label="Checkbox for following text input" name="whatsappCheck" id="">
+                    <?php
+                    if($row['whatsapp'] != ""){
+                        if ($row["whatsappAvaliability"] == 1)
+                        {
+                            echo '<input class="whatsappUserNumber" style="float: right" type="radio" aria-label="Checkbox for following text input"
+                          name="whatsappCheck" id="whatsappUserNumberCheck" value="'.$row["id"].'" checked>';
+                        }else{
+                            echo '<input class="whatsappUserNumber" style="float: right" type="radio" aria-label="Checkbox for following text input"
+                           name="whatsappCheck" id="whatsappUserNumberCheck" value="'.$row["id"].'">';
+                        }
+                    }
+
+                    ?>
+
 
                     <a target="_blank" href="https://api.whatsapp.com/send?phone=00966<?php echo $row['whatsapp']; ?>" >
                     <?php echo $row['whatsapp']; ?>
@@ -179,7 +192,7 @@ if(  $userview_2_ != 'on' ){
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>رقم الواتساب</label>
-                                    <input type="text" name="whatsapp" value="<?php echo $row["whatsapp"]; ?>"   class="form-control" required>
+                                    <input type="tel" name="whatsapp" pattern="^([0-9]|[0-9]{9})$"  title="من فضلك ادخل رقم الواتساب من دون صفر في البدايه" value="<?php echo $row["whatsapp"]; ?>"   class="form-control" required>
                                 </div></div>
                                <!-- /.form-group -->
                                <div class="col-md-6">
@@ -240,6 +253,18 @@ if(  $userview_2_ != 'on' ){
                                 <label>حذف</label>
                                <input type="checkbox" name="userdelete3" <?php echo ($row["userdelete3"] =='on' ? 'checked' : '');?> >
                                </div>
+                               <div class="form-group">
+                                          <label style="padding-left: 22px;color: green">المجموعات</label>&nbsp;&nbsp;
+                                          <label>عرض</label>
+                                          <input type="checkbox" name="userview4"  <?php echo ($row["userview4"] =='on' ? 'checked' : '');?> >
+                                          &nbsp;&nbsp;
+
+                                          <label>تعديل</label>
+                                          <input type="checkbox" name="useredit4" <?php echo ($row["useredit4"] =='on' ? 'checked' : '');?>  >
+                                          &nbsp;&nbsp;
+                                          <label>حذف</label>
+                                          <input type="checkbox" name="userdelete4" <?php echo ($row["userdelete4"] =='on' ? 'checked' : '');?> >
+                                      </div>
 
                                   </div>
                                <!-- /.form-group -->
@@ -324,7 +349,7 @@ if(  $userview_2_ != 'on' ){
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>رقم الواتساب</label>
-                                    <input placeholder="من فضلك ادخل رقم الواتساب من دون صفر في البدايه" type="text" name="whatsapp"    class="form-control" required>
+                                    <input placeholder="من فضلك ادخل رقم الواتساب من دون صفر في البدايه" type="text" name="whatsapp"  pattern="^([0-9]|[0-9]{9})$"  title="من فضلك ادخل رقم الواتساب من دون صفر في البدايه" class="form-control" required>
                                 </div></div>
                                <!-- /.form-group -->
                                <div class="col-md-6">
@@ -384,6 +409,19 @@ if(  $userview_2_ != 'on' ){
                                 <label>حذف</label>
                                <input type="checkbox" name="userdelete3"  >
                                </div>
+                               <div class="form-group">
+                                          <label style="padding-left: 22px;color: green">المجموعات</label>&nbsp;&nbsp;
+                                          <label>عرض</label>
+                                          <input type="checkbox" name="userview4">
+                                          &nbsp;&nbsp;
+
+                                          &nbsp;&nbsp;
+                                          <label>تعديل</label>
+                                          <input type="checkbox" name="useredit4">
+                                          &nbsp;&nbsp;
+                                          <label>حذف</label>
+                                          <input type="checkbox" name="userdelete4">
+                                      </div>
 
                                   </div>
                                <!-- /.form-group -->
@@ -426,9 +464,13 @@ $userview3=htmlspecialchars($_POST['userview3']);
 $useradd3=htmlspecialchars($_POST['useradd3']);
 $useredit3=htmlspecialchars($_POST['useredit3']);
 $userdelete3=htmlspecialchars($_POST['userdelete3']);
-$password= md5($password);
+
+$userview4=htmlspecialchars($_POST['userview4']);
+$useredit4=htmlspecialchars($_POST['useredit4']);
+$userdelete4=htmlspecialchars($_POST['userdelete4']);
+$password= $password;
 $password_confirmation=htmlspecialchars($_POST['pwd']);
-$password_confirmation= md5($password_confirmation);
+$password_confirmation= $password_confirmation;
 if ($password!==$password_confirmation){
  ?>
    <script type="text/javascript">
@@ -449,8 +491,9 @@ if ($count1>0){
     </script>
     <?php
    }else{
-$sql="insert into users (username,name,password,mail,whatsapp,useradd,useredit,userdelete,useradd2,useredit2,userdelete2,useradd3,useredit3,userdelete3,userview,userview2,userview3) values
-('$username','$name','$password','$mail','$whatsAppNumber','$useradd','$useredit','$userdelete','$useradd2','$useredit2','$userdelete2','$useradd3','$useredit3','$userdelete3','$userview','$userview2','$userview3')";
+       $passordsDB = md5($password);
+$sql="insert into users (username,name,password,mail,whatsapp,userview,useradd,useredit,userdelete,userview2,useradd2,useredit2,userdelete2,userview3,useradd3,useredit3,userdelete3,userview4,useredit4,userdelete4) values
+('$username','$name','$passordsDB','$mail','$whatsAppNumber','$userview', '$useradd','$useredit','$userdelete','$userview2','$useradd2','$useredit2','$userdelete2','$userview3','$useradd3','$useredit3','$userdelete3','$userview4','$useredit4','$userdelete4')";
 $result=$conn->query($sql);
 if ($result == true){
  ?>
@@ -490,9 +533,13 @@ $useradd3=htmlspecialchars($_POST['useradd3']);
 $useredit3=htmlspecialchars($_POST['useredit3']);
 $userdelete3=htmlspecialchars($_POST['userdelete3']);
 
-$password= md5($password);
+$userview4=htmlspecialchars($_POST['userview4']);
+$useredit4=htmlspecialchars($_POST['useredit4']);
+$userdelete4=htmlspecialchars($_POST['userdelete4']);
+
+$password= $password;
 $password_confirmation=htmlspecialchars($_POST['pwd']);
-$password_confirmation= md5($password_confirmation);
+$password_confirmation= $password_confirmation;
 if ($password!==$password_confirmation){
  ?>
    <script type="text/javascript">
@@ -513,10 +560,11 @@ if ($count1 > 0){
     </script>
     <?php
    }else{
+       $passwordUpdate = md5($password);
 $sql="update users set
 username='$username',
 name = '$name',
-password='$password',
+password='$passwordUpdate',
 mail = '$mail',
 whatsapp = '$whatsAppNumber',
 useradd='$useradd',
@@ -530,7 +578,10 @@ useredit3='$useredit3',
 userdelete3='$userdelete3',
 userview='$userview',
 userview2='$userview2',
-userview3='$userview3'
+userview3='$userview3',
+userview4 = '$userview4',
+useredit4='$useredit4',
+userdelete4='$userdelete4'
 where id = '$ids'
 ";
 $result=$conn->query($sql);

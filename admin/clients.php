@@ -1,5 +1,4 @@
 <?php
-//#FC1111
 error_reporting(0);
 include('../connect.php');
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
