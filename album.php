@@ -3,8 +3,8 @@
   include('connect.php');
 
   if( isset($_GET['c']) || $_GET['c'] ){
-	$TOKEN = $_GET['c'];
-    $ALBUM = $_GET['B'];
+	$TOKEN = filter_var($_GET['c'] , FILTER_SANITIZE_STRING);
+    $ALBUM = filter_var($_GET['B'] , FILTER_SANITIZE_STRING);
 }
 
     ?>

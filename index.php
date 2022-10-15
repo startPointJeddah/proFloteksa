@@ -1,15 +1,30 @@
 <?php
 error_reporting(0);
 include('connect.php');
+if(! isset($_GET['c']) || ! isset($_GET['p']) || ! isset($_GET['b'])){
+    header('location: invalidLink.php');
+    exit;
+}
 if( isset($_GET['c']) || $_GET['c'] ){
-    $TOKEN = $_GET['c'];
-    $projectNumber = $_GET['p'];
-    $buildingNumber = $_GET['b'];
+    $TOKEN = filter_var($_GET['c'], FILTER_SANITIZE_STRING);
+    $projectNumber = filter_var($_GET['p'] , FILTER_SANITIZE_STRING);
+    $buildingNumber = filter_var($_GET['b'] , FILTER_SANITIZE_STRING);
+}
+$whatsAppAvaliabilty = 0;
+$query = "select whatsapp  from users where whatsappAvaliability = 1";
+$resultQuery=$conn->query($query);
+if($resultQuery->num_rows > 0){
+    while($row = $resultQuery->fetch_assoc()) {
+        $whatsAppAvaliabilty = $row["whatsappAvaliability"];
+        $whatsAppNumber = $row["whatsapp"];
+    }
 }
 
-$query = "select stock , flat, floor from customers where token = '$TOKEN'";
+
+$query = "select name ,stock , flat, floor from customers where token = '$TOKEN'";
 $resultQuery=$conn->query($query);
 while($row = $resultQuery->fetch_assoc()) {
+    $name = $row['name'];
     $stock=($row['stock']);
       $flat=($row['flat']);
       $floor=($row['floor']);
@@ -23,7 +38,6 @@ $count = $result->num_rows;
 while($row = $result->fetch_assoc()) {
     $count = $count+1;
     $cid=$row['id'];
-    //$name = $row['name'];
     $step1 = $row['step1'];
     $step2 = $row['step2'];
     $step3 = $row['step3'];
@@ -33,6 +47,7 @@ while($row = $result->fetch_assoc()) {
     $step7 = $row['step7'];
     $projectdate = $row['project_date'];
     $deliveryDate = $row['project_delivery_date'];
+    $buildingDeliveryCheck = $row['building_delivery_check'];
     $project =($row['project_number']);
     $bulding=($row['building_number']);
 
@@ -90,7 +105,7 @@ $comments = [];
                                             <div class="elementor-widget-wrap elementor-element-populated">
                                                 <div class="elementor-element elementor-element-4ab3d47 elementor-widget elementor-widget-heading" data-id="4ab3d47" data-element_type="widget" data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
-                                                        <h5 class="elementor-heading-title elementor-size-default">عزيزي العميل <?PHP ECHO $name;?> المحترم :</h5>		</div>
+                                                        <h5 class="elementor-heading-title elementor-size-default"> عزيزي العميل  المحترم :<?PHP echo $name;?></h5>		</div>
                                                 </div>
                                                 <div class="elementor-element elementor-element-3c896bb elementor-widget elementor-widget-text-editor" data-id="3c896bb" data-element_type="widget" data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
@@ -147,11 +162,16 @@ $comments = [];
                                 $countDown = new countdown();
                                 $currentData = date("Y-m-d");
 
-                                if(strtotime($currentData) >=  strtotime($deliveryDate)){
-                                    $countDown->emptyDeliveryDate();
+                                if($buildingDeliveryCheck && $deliveryDate != ""){
+                                    $countDown->BuildingDelivered();
+                                }
+                                elseif(strtotime(date("Y-m-d H:i:s")) < strtotime($deliveryDate) && $deliveryDate != ""){
+                                    $countDown->htmlCountDownClockId(strtotime($deliveryDate) , strtotime($projectdate));
 
+                                }elseif(strtotime(date("Y-m-d H:i:s")) > strtotime($deliveryDate) && $deliveryDate != ""){
+                                    $countDown->htmlCountDownClockAlertId(strtotime($deliveryDate) , strtotime($projectdate));
                                 }else{
-                                    $countDown->htmlCountDown();
+                                    $countDown->emptyDeliveryDate();
                                 }
 
                                 ?>

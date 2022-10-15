@@ -38,7 +38,7 @@ var astra = {"break_point":"921","isRtl":"1"};
 			resturl: 'https://project.floteksa.com/wp-json/elementskit/v1/',
 		}
 
-		
+
 </script>
 <script src='https://project.floteksa.com/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts.js?ver=2.7.0' id='ekit-widget-scripts-js'></script>
 <script id='site-reviews-js-before'>

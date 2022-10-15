@@ -1,6 +1,19 @@
+var globaDeadLine;
+var startLine;
+var globalDeadLineIsgreater = false;
+var globalDeadLineIsSmaller = false;
+function updateTimer(){
+    var d = new Date();
+    if(globaDeadLine > d ){
+        var time = globaDeadLine - d ;
+        globalDeadLineIsgreater = true;
+        // console.log(globalDeadLineIsgreater);
+    }else{  // calculate the difference current date & time and the deliveryPastTime
+        time = d  - globaDeadLine ;
+        globalDeadLineIsSmaller = true;
+        // console.log(time);
+    }
 
-function updateTimer(deadline){
-    var time = deadline - new Date();
     return {
         'days': Math.floor( time/(1000*60*60*24) ),
         'hours': Math.floor( (time/(1000*60*60)) % 24 ),
@@ -14,19 +27,44 @@ function updateTimer(deadline){
 function animateClock(span){
     //span.className = "turn";
     setTimeout(function(){
-        span.className = "";
+        // span.className = "";
     },700);
 }
 
-function startTimer(id, deadline){
+function startTimer(id){
+
     var timerInterval = setInterval(function(){
         var clock = document.getElementById(id);
-        var timer = updateTimer(deadline);
+        var timer = updateTimer();
+        if(globalDeadLineIsgreater){
+            // globaDeadLine = globaDeadLine -1000;
+        }
+        if(globalDeadLineIsgreater){
+            globalDeadLineIsgreater = false;
+            clock.innerHTML =
+                '<span' +
+                ' className="elementor-countdown-digits elementor-countdown-days">' + timer.days + '</span><span class="elementor-countdown-label">الآيام</span>'
+                + '<span' +
+                ' className="elementor-countdown-digits elementor-countdown-days">' + timer.days + '</span><span class="elementor-countdown-label">الساعات</span>'
+                +'<span' +
+                ' className="elementor-countdown-digits elementor-countdown-days">' + timer.days + '</span><span class="elementor-countdown-label">الدقائق</span>'
+                +'<span' +
+                ' className="elementor-countdown-digits elementor-countdown-days">' + timer.days + '</span><span class="elementor-countdown-label">الثواني</span>'
+                ;
+        }else if(globalDeadLineIsSmaller){
+            globalDeadLineIsSmaller = false;
+            clock.innerHTML =
+                '<div class="elementor-countdown-item"><span' +
+                ' className="elementor-countdown-digits elementor-countdown-days">' + timer.days + '</span><span class="elementor-countdown-label">الآيام</span></div>'
+                + '<div class="elementor-countdown-item"><span' +
+                ' className="elementor-countdown-digits elementor-countdown-days">' + timer.days + '</span><span class="elementor-countdown-label">الساعات</span></div>'
+                +'<div class="elementor-countdown-item"><span' +
+                ' className="elementor-countdown-digits elementor-countdown-days">' + timer.days + '</span><span class="elementor-countdown-label">الدقائق</span></div>'
+                +'<div class="elementor-countdown-item"><span' +
+                ' className="elementor-countdown-digits elementor-countdown-days">' + timer.days + '</span><span class="elementor-countdown-label">الثواني</span></div>'
+            ;
+        }
 
-        clock.innerHTML = '<span>' + timer.days + '</span>'
-            + '<span>' + timer.hours + '</span>'
-            + '<span>' + timer.minutes + '</span>'
-            + '<span>' + timer.seconds + '</span>';
 
         //animations
         var spans = clock.getElementsByTagName("span");
@@ -36,19 +74,24 @@ function startTimer(id, deadline){
         if(timer.hours == 23 && timer.minutes == 59 && timer.seconds == 59) animateClock(spans[0]);
 
         //check for end of timer
-        if(timer.total < 1){
-            clearInterval(timerInterval);
-            clock.innerHTML = '<span>0</span><span>0</span><span>0</span><span>0</span>';
-        }
+        if(timer.total < -1000000000000000000000000000){
+                    clearInterval(timerInterval);
+                }
 
 
     }, 1000);
 }
 
 
-function startCountDown(date){
-    var date = new Date(date * 1000);
-    date = date.toLocaleDateString("en-US");
-    var deadline = new Date(date);
-    startTimer("clock", deadline);
+function startCountDown(date , startdate){
+
+    var d = new Date();
+    globaDeadLine = date*1000;
+    startLine = startdate*1000;
+    if(globaDeadLine > d){
+        startTimer("clock" );
+    }else{
+        // console.log("hello");
+        startTimer("clock-alert");
+    }
 };

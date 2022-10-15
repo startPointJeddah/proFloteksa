@@ -117,7 +117,7 @@ if(  $userview_2_ != 'on' ){
            <?php echo $row['username']; ?>
          </td>
                 <td>
-<!--                    <input class="whatsappUserNumber" style="float: right" type="radio" aria-label="Checkbox for following text input" name="whatsappCheck" id="">-->
+                    <input class="whatsappUserNumber" style="float: right" type="radio" aria-label="Checkbox for following text input" name="whatsappCheck" id="">
 
                     <a target="_blank" href="https://api.whatsapp.com/send?phone=00966<?php echo $row['whatsapp']; ?>" >
                     <?php echo $row['whatsapp']; ?>

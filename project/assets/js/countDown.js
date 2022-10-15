@@ -23,7 +23,7 @@ function startTimer(id, deadline){
         var clock = document.getElementById(id);
         var timer = updateTimer(deadline);
 
-        clock.innerHTML = '<span>' + timer.days + '<span>الساعات</span></span>'
+        clock.innerHTML = '<div>' + timer.days + '<span>الساعات</span></div>'
             + '<span>' + timer.hours + '</span>'
             + '<span>' + timer.minutes + '</span>'
             + '<span>' + timer.seconds + '</span>';

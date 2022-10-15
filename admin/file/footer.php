@@ -69,7 +69,6 @@
 <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
 <script src="https://cdn.datatables.net/rowgroup/1.2.0/js/dataTables.rowGroup.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
   $(function () {
     //Initialize Select2 Elements
@@ -107,39 +106,39 @@
 </script>
 
 <script>
-$(document).ready(function(){
-
- function load_unseen_notification(view = '')
- {
-  $.ajax({
-   url:"fetch.php",
-   method:"POST",
-   data:{view:view},
-   dataType:"json",
-   success:function(data)
-   {
-    $('.dropdown-noty').html(data.notification);
-    if(data.unseen_notification > 0)
-    {
-     $('.count').html(data.unseen_notification);
-
-    }
-   }
-  });
- }
-
- load_unseen_notification();
-
- $(document).on('click', '.toggle', function(){
-  $('.count').html('');
-  load_unseen_notification('yes');
- });
-
- setInterval(function(){
-  load_unseen_notification();
- }, 5000);
-
-});
+// $(document).ready(function(){
+//
+//  function load_unseen_notification(view = '')
+//  {
+//   $.ajax({
+//    url:"fetch.php",
+//    method:"POST",
+//    data:{view:view},
+//    dataType:"json",
+//    success:function(data)
+//    {
+//     $('.dropdown-noty').html(data.notification);
+//     if(data.unseen_notification > 0)
+//     {
+//      $('.count').html(data.unseen_notification);
+//
+//     }
+//    }
+//   });
+//  }
+//
+//  load_unseen_notification();
+//
+//  $(document).on('click', '.toggle', function(){
+//   $('.count').html('');
+//   load_unseen_notification('yes');
+//  });
+//
+//  setInterval(function(){
+//   load_unseen_notification();
+//  }, 5000);
+//
+// });
 
 </script>
 

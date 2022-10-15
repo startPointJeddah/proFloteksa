@@ -136,6 +136,7 @@ $(document).ready(function() {
                     secondTypeFlag = false;
                     thirdTypeFlag = false;
                 }else{
+                    console.log(form_data);
                     form_data.append("project" , project);
                     form_data.append("buliding" , buliding);
                     $.ajax({
@@ -147,29 +148,7 @@ $(document).ready(function() {
                         cache: false,
                         dataType: 'text',
                         success:function(data) {
-
-                            Swal.fire({
-                                title: "رابط الصور",
-                                html:
-                                    '<input id="text_to_be_copied" class="swal2-input" value="'+data+'" readonly></input>' +
-                                    '<button type="button" class="btn btn-default" id="btn-copy" style="margin-left:5px" onclick="copyToClipboard()">انقر لنسخ الرابط</button>' +
-                                    // '<button type="button" class="btn btn-primary swal-confirm" id="btn-ok" style="float:right" disabled>تم نسخ الرابط بنجاح</button>' +
-                                    '</div>',
-                                showConfirmButton: false,
-                                type: "success",
-                                onOpen: () => {
-                                    $("#btn-copy").click(() => {
-                                        $("#btn-ok").prop('disabled', false);
-
-                                        $("#text_to_be_copied").select();
-                                        document.execCommand("copy");
-                                    });
-
-                                    $("#btn-ok").click(() => {
-                                        Swal.close();
-                                    });
-                                }
-                            });
+                                             window.open('https://pro.floteksa.com/admin/uploadProjectImages.php?project='+project+'&bulding='+buliding,'_blank' );
                         }
 
                     });
@@ -177,6 +156,39 @@ $(document).ready(function() {
 
 
 });
+
+    $("#delivery_building_check").on("click" , function(){
+        var rowId = $("#delivery_building_check").val();
+        var isChecked = $('#delivery_building_check')[0].checked;
+
+        $.post("updateBuildingDelivery.php",
+            {
+                rowId :rowId,
+                isChecked: isChecked,
+                async :false
+            },
+            function(data, status){
+                if(status == "success"){
+                   if(data){
+                       Swal.fire({
+                           position: 'top-end',
+                           icon: 'success',
+                           title: 'تم تغيير حاله المبني بنجاح',
+                           showConfirmButton: true,
+                           timer: 3000
+                       })
+                   }else{
+                       Swal.fire({
+                           icon: 'error',
+                           title: 'خطأ',
+                           text: 'حدث خطأ ما برجاء اعاده المحاوله',
+
+                       });
+                   }
+                }
+
+            });
+    })
 
 });
 

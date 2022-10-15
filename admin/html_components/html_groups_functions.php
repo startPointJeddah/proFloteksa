@@ -4,6 +4,7 @@ class html_groups_functions
 {
     public $dataQuery;
     private $insertToProjectBuildTableFlag = false;
+    private $isBuildingDeliveryChecked;
 
     function headPreview ()
     {
@@ -84,7 +85,7 @@ class html_groups_functions
                                                     
                                                     <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label>تاريخ أصدار بطاقه</label>
+                                                        <label>تاريخ إصدار رخصة البناء</label>
                                                         <input id="projectDateid" type="date" name="projectDate" class="form-control" value="project_date"/>
                                                     </div></div>
 
@@ -205,7 +206,7 @@ class html_groups_functions
                                 
                                 <th>رقم المشروع</th>
                                 <th>رقم العماره</th>
-                                <th>التاريخ</th>
+                                <th>تاريخ إصدار رخصة البناء</th>
                                 <th>تاريخ التسليم</th>
                                 <th>إصدار رخصة البناء</th>
                                 <th>الأعمال الإنشائية</th>
@@ -214,6 +215,7 @@ class html_groups_functions
                                 <th>استلام اتحاد الملاك</th>
                                 <th>فرز الصكوك</th>
                                 <th>شهادة الأشغال</th>
+                                <th>تسليم المبني</th>
                                 <th>تعديل</th>
                                 <th>حذف</th>
                                 
@@ -261,6 +263,10 @@ class html_groups_functions
                                 <td>
                                     step7
                                 </td>
+                                <td>
+                                    <input id="delivery_building_check" type="checkbox" value="rowId" name="delivery_building_check" 
+                                       delivery_building_check_replacement>
+                                </td>
 
                                 ';
         $content = $this->displayData($content);
@@ -286,6 +292,11 @@ class html_groups_functions
         $result = $conn->query($sql);
         while ($row = $result->fetch_assoc()) {
             $data[] = $row;
+            if($row["building_delivery_check"]){
+                $this->isBuildingDeliveryChecked = "checked";
+            }else{
+                $this->isBuildingDeliveryChecked = "";
+            }
         }
 
         $this->dataQuery = $data;
@@ -298,11 +309,11 @@ class html_groups_functions
         for ($x = 0; $x < count($data); $x++) {
             $content = str_replace(
                 array("rowId", "project_number", "building_number", "project_date", "project_delivery_date"
-                , "step1", "step2", "step3", "step4", "step5", "step6", "step7", "row_number")
+                , "step1", "step2", "step3", "step4", "step5", "step6", "step7", "row_number" , "delivery_building_check_replacement")
                 ,
                 array($data[$x]["id"], $data[$x]["project_number"], $data[$x]["building_number"], $data[$x]["project_date"],
                     $data[$x]["project_delivery_date"], $data[$x]["step1"], $data[$x]["step2"], $data[$x]["step3"], $data[$x]["step4"],
-                    $data[$x]["step5"], $data[$x]["step6"], $data[$x]["step7"], ($x + 1)),
+                    $data[$x]["step5"], $data[$x]["step6"], $data[$x]["step7"], ($x + 1) , $this->isBuildingDeliveryChecked),
                 $content);
             $result .= $content;
 
@@ -350,13 +361,15 @@ class html_groups_functions
 
     public function insertProjectsFromCustomersToProjects($data){
     include "../connect.php";
-    if(isset($_SESSION["customersProjectBuildingDataForSession"])){
         $sql = "insert into project_building
         (project_number , building_number)
         values";
+    if(!isset($_SESSION["customersProjectBuildingDataForSession"])){
+
 
         $finalResult = array();
         $query = "SELECT `project` ,`bulding` FROM customers except SELECT `project_number` , `building_number` from project_building";
+
         $query =  $conn->query($query);
            if($query->num_rows > 0){
                $this->insertToProjectBuildTableFlag = true;

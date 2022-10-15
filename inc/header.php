@@ -1,9 +1,12 @@
+<?php
+error_reporting(0);
+?>
 <!DOCTYPE html>
 <html dir="rtl" lang="ar"
 	prefix="og: https://ogp.me/ns#" >
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="profile" href="https://gmpg.org/xfn/11">
 
 <title><?php echo $name ?> - project floteksa</title>
@@ -79,7 +82,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <link rel='stylesheet' id='ekit-responsive-css'  href='assets/css/responsive.css?ver=2.7.0' media='all' />
 <link rel='stylesheet' id='elementskit-rtl-css'  href='assets/css/rtl.css?ver=2.7.0' media='all' />
 <link rel='stylesheet' id='site-reviews-css'  href='assets/css/default.css?ver=5.25.1' media='all' />
-<link rel="stylesheet" href="assets/css/countDown.css"  type="text/css"/>
+<!--<link rel="stylesheet" href="assets/css/countDown.css"  type="text/css"/>-->
 <link rel="stylesheet" href="assets/css/whatapp.css" type="text/css"/>
     <style id='site-reviews-inline-css'>
 .gl-star-rating--stars[class*=" s"]>span,.glsr-star-empty{background-image:url(https://project.floteksa.com/wp-content/plugins/site-reviews/assets/images/star-empty.svg)!important}.glsr-field-is-invalid .gl-star-rating--stars[class*=" s"]>span{background-image:url(https://project.floteksa.com/wp-content/plugins/site-reviews/assets/images/star-error.svg)!important}.glsr-star-half{background-image:url(https://project.floteksa.com/wp-content/plugins/site-reviews/assets/images/star-half.svg)!important}.gl-star-rating--stars.s100>span,.gl-star-rating--stars.s10>span:first-child,.gl-star-rating--stars.s20>span:nth-child(-1n+2),.gl-star-rating--stars.s30>span:nth-child(-1n+3),.gl-star-rating--stars.s40>span:nth-child(-1n+4),.gl-star-rating--stars.s50>span:nth-child(-1n+5),.gl-star-rating--stars.s60>span:nth-child(-1n+6),.gl-star-rating--stars.s70>span:nth-child(-1n+7),.gl-star-rating--stars.s80>span:nth-child(-1n+8),.gl-star-rating--stars.s90>span:nth-child(-1n+9),.glsr-star-full{background-image:url(https://project.floteksa.com/wp-content/plugins/site-reviews/assets/images/star-full.svg)!important}.glsr-captcha-holder iframe{margin:0!important}
@@ -98,15 +101,18 @@ flexibility(document.documentElement);
 <script src='https://project.floteksa.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
 <script src='https://polyfill.io/v3/polyfill.min.js?version=3.109.0&#038;features=Array.prototype.find%2CCustomEvent%2CElement.prototype.closest%2CElement.prototype.dataset%2CEvent%2CMutationObserver%2CNodeList.prototype.forEach%2CObject.assign%2CObject.keys%2CString.prototype.endsWith%2CURL%2CURLSearchParams%2CXMLHttpRequest&#038;flags=gated&#038;ver=6.0.2' id='site-reviews/polyfill-js'></script>
 <link rel="https://api.w.org/" href="https://project.floteksa.com/wp-json/" /><link rel="alternate" type="application/json" href="https://project.floteksa.com/wp-json/wp/v2/pages/7" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://project.floteksa.com/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://project.floteksa.com/wp-includes/wlwmanifest.xml" /> 
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://project.floteksa.com/wp-includes/wlwmanifest.xml" />
 <meta name="generator" content="WordPress 6.0.2" />
 <link rel='shortlink' href='https://project.floteksa.com/?p=7' />
 <link rel="alternate" type="application/json+oembed" href="https://project.floteksa.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject.floteksa.com%2F%25d8%25a7%25d9%2584%25d8%25b1%25d8%25a6%25d9%258a%25d8%25b3%25d9%258a%25d8%25a9%2F" />
 <link rel="alternate" type="text/xml+oembed" href="https://project.floteksa.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject.floteksa.com%2F%25d8%25a7%25d9%2584%25d8%25b1%25d8%25a6%25d9%258a%25d8%25b3%25d9%258a%25d8%25a9%2F&#038;format=xml" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/css/countDown.css"  type="text/css">
+
 </head>
-<?php $date =  $deliveryDate; ?>
-<body itemtype='https://schema.org/WebPage' itemscope='itemscope' class="rtl page-template page-template-elementor_header_footer page page-id-7 ehf-header ehf-footer ehf-template-astra ehf-stylesheet-astra ast-single-post ast-inherit-site-logo-transparent ast-hfb-header ast-header-break-point ast-page-builder-template ast-no-sidebar astra-3.9.1 elementor-default elementor-template-full-width elementor-kit-5 elementor-page elementor-page-7" onload="startCountDown(<?php echo strtotime($date);?>)">
+<?php $date =  $deliveryDate;
+$startDate = $projectdate;?>
+<body itemtype='https://schema.org/WebPage' itemscope='itemscope' class="rtl page-template page-template-elementor_header_footer page page-id-7 ehf-header ehf-footer ehf-template-astra ehf-stylesheet-astra ast-single-post ast-inherit-site-logo-transparent ast-hfb-header ast-header-break-point ast-page-builder-template ast-no-sidebar astra-3.9.1 elementor-default elementor-template-full-width elementor-kit-5 elementor-page elementor-page-7" ">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>
 <a
 	class="skip-link screen-reader-text"
@@ -139,15 +145,22 @@ class="hfeed site" id="page">
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-53dcc0d elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="53dcc0d" data-element_type="widget" data-widget_type="icon-list.default">
 				<div class="elementor-widget-container">
-			<link rel="stylesheet" href="https://project.floteksa.com/wp-content/plugins/elementor/assets/css/widget-icon-list-rtl.min.css">		<ul class="elementor-icon-list-items">
+			<link rel="stylesheet" href="https://project.floteksa.com/wp-content/plugins/elementor/assets/css/widget-icon-list-rtl.min.css">		<ul class="elementor-icon-list-items" style="width: 200px;margin-top: -2em;">
 							<li class="elementor-icon-list-item">
 											<a href="tel:920033394​">
 
 												<span class="elementor-icon-list-icon">
-							<i aria-hidden="true" class="fas fa-phone"></i>						</span>
-										<span class="elementor-icon-list-text">920033394​</span>
+							<i aria-hidden="true" class="fa fa-phone"></i>						</span>
+										<span class="elementor-icon-list-text" >920033394​</span>
 											</a>
 									</li>
+                        <li class="elementor-icon-list-item">
+                            <a href="https://api.whatsapp.com/send?phone=00966'.$whatsAppAvaliabilty.'&amp;text=السلام عليكم&amp;app_absent=0">
+                                <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fa fa-whatsapp" style="color:#25d366"></i>						</span>
+                                <span class="elementor-icon-list-text" style="color:#25d366"><?php echo $whatsAppNumber?></span>
+                            </a>
+                        </li>
 						</ul>
 				</div>
 				</div>
