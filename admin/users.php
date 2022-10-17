@@ -181,7 +181,7 @@ if(  $userview_2_ != 'on' ){
                                  <div class="col-md-12">
                                 <div class="form-group">
                              <label>* البريد الالكتروني</label>
-                               <input type="email" class="form-control" name="mail" value="<?php echo $row["mail"]; ?>" required>
+                               <input type="email" class="form-control" name="mail" value="<?php echo $row["mail"]; ?>" >
                                 </div></div>
                                 <!-- /.form-group -->
                                 <div class="col-md-12">
@@ -192,18 +192,18 @@ if(  $userview_2_ != 'on' ){
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>رقم الواتساب</label>
-                                    <input type="tel" name="whatsapp" pattern="^([0-9]|[0-9]{9})$"  title="من فضلك ادخل رقم الواتساب من دون صفر في البدايه" value="<?php echo $row["whatsapp"]; ?>"   class="form-control" required>
+                                    <input type="tel" name="whatsapp" pattern="^([0-9]|[0-9]{9})$"  title="من فضلك ادخل رقم الواتساب من دون صفر في البدايه وتأكد ان عدد الارقام المدخله 9 ارقام فقط" value="<?php echo $row["whatsapp"]; ?>"   class="form-control">
                                 </div></div>
                                <!-- /.form-group -->
                                <div class="col-md-6">
                                <div class="form-group">
                                <label>كلمة المرور </label>
-                               <input  type="text" name="pw"  value='' class="form-control"  required>
+                               <input  type="text" name="pw"  value='' class="form-control">
                                </div></div>
                                <div class="col-md-6">
                                <div class="form-group">
                                <label>تأكيد كلمة المرور</label>
-                               <input type="text" name="pwd"  value='' class="form-control" required>
+                               <input type="text" name="pwd"  value='' class="form-control">
                                </div></div>
                                <!-- /.form-group -->
 
@@ -560,13 +560,32 @@ if ($count1 > 0){
     </script>
     <?php
    }else{
-       $passwordUpdate = md5($password);
+    if($password == ""){
+        $passwordUpdateStatement = "";
+    }else{
+        $passwordUpdate = md5($password);
+        $passwordUpdateStatement = "password='$passwordUpdate',";
+
+    }
+
+    if($whatsAppNumber == ""){
+        $whatsAppNumberUpdateStatement = "";
+    }else{
+        $whatsAppNumberUpdateStatement = "whatsapp='$whatsAppNumber',";
+    }
+
+    if($mail == ""){
+        $mailUpdateStatement = "";
+    }else{
+        $mailUpdateStatement = "mail = '$mail',";
+    }
+
 $sql="update users set
 username='$username',
 name = '$name',
-password='$passwordUpdate',
-mail = '$mail',
-whatsapp = '$whatsAppNumber',
+$passwordUpdateStatement
+$mailUpdateStatement
+$whatsAppNumberUpdateStatement
 useradd='$useradd',
 useredit='$useredit',
 userdelete='$userdelete',
